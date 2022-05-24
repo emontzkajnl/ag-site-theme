@@ -49,7 +49,10 @@ function ag_sites_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'ag-sites' ),
+			'primary'   => __( 'Top primary menu', 'ag-sites' ),
+			'top_bar'   => __( 'Top bar menu', 'ag-sites' ),
+			'top_bar_22'   => __( 'Top bar menu 2022', 'ag-sites' ),
+			'bottom_menu'   => __( 'Bottom menu', 'ag-sites' ),
 		)
 	);
 
@@ -140,7 +143,8 @@ add_action( 'widgets_init', 'ag_sites_widgets_init' );
 function ag_sites_scripts() {
 	wp_enqueue_style( 'ag-sites-style', get_stylesheet_uri(), array(), _ag_site_theme_VERSION );
 	wp_style_add_data( 'ag-sites-style', 'rtl', 'replace' );
-
+	wp_enqueue_script( 'headroom', get_template_directory_uri() . '/js/headroom.js', array(), _ag_site_theme_VERSION , true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery', 'headroom'), _ag_site_theme_VERSION , true );
 	wp_enqueue_script( 'ag-sites-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _ag_site_theme_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -176,3 +180,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// global $_wp_additional_image_sizes; 
+// print '<pre>'; 
+// print_r( $_wp_additional_image_sizes ); 
+// print '</pre>';

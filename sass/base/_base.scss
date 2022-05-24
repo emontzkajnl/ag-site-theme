@@ -1,3 +1,14 @@
+/* Grid
+https://github.com/michowski/flexible-gs
+--------------------------------------------- */
+@import "elements/flexible-gs";
+@include flexible-create( 12, 15px );
+// negative outer margins to make it bootstrapy
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 /* Typography
 --------------------------------------------- */
 @import "typography/typography";
@@ -5,10 +16,13 @@
 /* Elements
 --------------------------------------------- */
 @import "elements/body";
+@import "elements/site-header";
+@import "elements/footer";
 @import "elements/hr";
 @import "elements/lists";
 @import "elements/media";
 @import "elements/tables";
+@import "elements/blocks";
 
 /* Links
 --------------------------------------------- */

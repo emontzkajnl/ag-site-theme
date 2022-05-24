@@ -1,0 +1,41 @@
+.ag-featured-post-sidebar {
+    .faps-featured, .faps-sideblock {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 50px;
+        position: relative;
+        > * {
+            margin-bottom: 0; 
+        }
+    }
+    .faps-featured {
+        height: 0;
+        padding-top: 60%;
+    }
+    .faps-sideblock {
+        padding-top: 61%;
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .faps-title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 15px;
+        background-color: rgba(256, 256, 256, 0.8);
+       text-align: center;
+    }
+}
+@media all and (min-width: 48em) {
+    .ag-featured-post-sidebar {
+        .faps-featured {
+            height: 100%;
+        }
+    }
+}

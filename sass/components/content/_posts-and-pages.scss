@@ -17,7 +17,21 @@
 	margin: 1.5em 0 0;
 }
 
+.entry-content {
+	> * {
+		max-width: 1366px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.container {
+	max-width: 1366px;
+	padding: 0 15px;
+	margin: 0 auto;
 }

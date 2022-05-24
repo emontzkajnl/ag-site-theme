@@ -1,0 +1,23 @@
+.site-header {
+    position: fixed;
+    height: 100px;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    box-shadow: #aaa 5px 0px 10px;
+    z-index: 10;
+    transition: height 0.2s;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    &.headroom--pinned {
+        height: 100px;
+        z-index: 10;
+      }
+      &.headroom--unpinned {
+        height: 70px;
+      }
+}
+.site-main {
+  padding-top: 120px;
+}
