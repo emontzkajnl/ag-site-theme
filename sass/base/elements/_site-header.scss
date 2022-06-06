@@ -8,7 +8,9 @@
     z-index: 10;
     transition: height 0.2s;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     &.headroom--pinned {
         height: 100px;

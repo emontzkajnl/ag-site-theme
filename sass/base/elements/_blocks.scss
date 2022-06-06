@@ -1,4 +1,5 @@
 .ag-featured-post-sidebar {
+    margin-bottom: 100px;
     .faps-featured, .faps-sideblock {
         background-position: center;
         background-size: cover;
@@ -17,8 +18,13 @@
         padding-top: 61%;
         width: 100%;
         margin-bottom: 30px;
+        display: block;
+
         &:last-child {
             margin-bottom: 0;
+        }
+        .faps-title {
+            font-size: 1.3rem;
         }
     }
     .faps-title {
@@ -27,15 +33,48 @@
         right: 0;
         bottom: 0;
         width: 100%;
-        padding: 15px;
+        padding: 16px;
         background-color: rgba(256, 256, 256, 0.8);
        text-align: center;
     }
+}
+.read-the-magazine {
+    .rtm-text {
+        padding: 15px 0;
+        border-top: 1px solid $black;
+        border-bottom: 1px solid $black;
+        h4 {
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+    }
+    .rtm-button {
+        text-transform: uppercase;
+        padding: 10px 15px;
+        border: 1px solid $black;
+        display: inline-block;
+        text-decoration: none;
+        color: $black;
+    }
+    
 }
 @media all and (min-width: 48em) {
     .ag-featured-post-sidebar {
         .faps-featured {
             height: 100%;
+        }
+    }
+    .read-the-magazine {
+        img {
+            max-width: 320px;
+        }
+        .mag-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .rtm-text {
+            margin-left: 30px;
         }
     }
 }

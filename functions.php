@@ -180,6 +180,25 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Contact Info',
+		'menu_title'	=> 'Contact Info',
+		'menu_slug'		=> 'contact-info',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	acf_add_options_page(array(
+		'page_title' 	=> 'Footer',
+		'menu_title'	=> 'Footer',
+		'menu_slug'		=> 'footer',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
+
+
+
 // global $_wp_additional_image_sizes; 
 // print '<pre>'; 
 // print_r( $_wp_additional_image_sizes ); 

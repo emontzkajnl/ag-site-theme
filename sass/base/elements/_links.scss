@@ -20,3 +20,15 @@ a {
 		outline: 0;
 	}
 }
+
+.title-link {
+	color: inherit;
+	text-decoration: none;
+	&:visited, &:focus, &:active {
+		color: inherit;
+	}
+	&:hover {
+		text-decoration: underline;
+		color: inherit;
+	}
+}

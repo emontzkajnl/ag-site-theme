@@ -10,9 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header container">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<!-- <header class="entry-header container"> -->
+		<?php //the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<!-- </header> --> <!-- .entry-header -->
 
 	<?php ag_sites_post_thumbnail(); ?>
 

@@ -56,4 +56,7 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		<?php //get_search_form(); ?>
+		<?php get_template_part( 'searchform' ); ?>
+
 	</header><!-- #masthead -->
