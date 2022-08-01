@@ -24,7 +24,7 @@
             margin-bottom: 0;
         }
         .faps-title {
-            font-size: 1.3rem;
+            font-size: 1rem;
         }
     }
     .faps-title {
@@ -35,17 +35,25 @@
         width: 100%;
         padding: 16px;
         background-color: rgba(256, 256, 256, 0.8);
-       text-align: center;
+       text-align: left;
     }
 }
 .read-the-magazine {
+    margin-bottom: 100px;
     .rtm-text {
-        padding: 15px 0;
+        padding: 30px 0;
         border-top: 1px solid $black;
         border-bottom: 1px solid $black;
+        font-family: "acumin-pro";
+        font-weight: 400;
+        color: $gray2;
+
         h4 {
             margin-top: 0;
             text-transform: uppercase;
+            font-size: 24px;
+            font-family: "acumin-pro";
+            font-weight: 700;
         }
     }
     .rtm-button {
@@ -57,6 +65,52 @@
         color: $black;
     }
     
+}
+.social-cube {
+    background-color: #e8f4d8;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    ul {
+        margin: 0;
+        padding-left: 0;
+        padding-bottom: 3px;
+        border-bottom: 5px solid #8cc63e;
+    }
+    li {
+        list-style: none;
+        display: inline-block;
+        padding-right: 25px;
+        &:last-child {
+            padding-right: 0;
+        }
+        a {
+            font-size: 2rem;
+            color: $darkgray;
+        }
+    }
+}
+.custom-article-list {
+    .section-heading {
+        font-weight: 400;
+    }
+    .cat-text {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
 }
 @media all and (min-width: 48em) {
     .ag-featured-post-sidebar {

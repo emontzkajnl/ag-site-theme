@@ -1,6 +1,6 @@
 .site-header {
     position: fixed;
-    height: 100px;
+    height: 150px;
     left: 0;
     right: 0;
     width: 100% !important;
@@ -13,13 +13,27 @@
     align-items: center;
     background-color: white;
     &.headroom--pinned {
-        height: 100px;
+        height: 150px;
         z-index: 10;
       }
       &.headroom--unpinned {
-        height: 70px;
+        height: 120px;
       }
 }
 .site-main {
-  padding-top: 120px;
+  padding-top: 150px;
+}
+.site-branding {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.site-logo {
+  width: 435px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+.nav-menu {
+  margin-top: 15px;
 }

@@ -1,17 +1,30 @@
 #newsletter {
     background-color: $lightgreen;
     color: $black;
+    padding-top: 70px;
+    padding-bottom: 80px;
     input[type=submit] {
         background-color: $green;
         color: white;
         text-transform: uppercase;
         font-weight: bold;
         width: 100%;
+        border-radius: 0;
+        height: 50px;
+        cursor: pointer;
+    }
+    input[type=text] {
+        border-radius: 0;
+        height: 50px;
+        &::placeholder {
+            font-style: italic;
+        }
     }
 }
 .site-footer {
     background-color: $darkgray;
     color: white;
+    padding-bottom: 80px;
     a {
         color: white;
         &:visited, &:active {
@@ -21,6 +34,15 @@
             text-decoration: underline;
             color: white;
         }
+    }
+}
+.site-info {
+	padding-top: 70px;
+	p {
+		font-size: 1rem;
+	}
+    .section-heading {
+        font-size: 1.25rem;
     }
 }
 @media screen and (min-width: 642px) {
