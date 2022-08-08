@@ -66,6 +66,22 @@
 	}
 }
 
+.entry-meta {
+	.addtoany_shortcode {
+		margin-top: 20px;
+	}
+
+}
+.addtoany_list {
+	margin-top: 20px;
+	a {
+		> span {
+			background-color: gray !important;
+			border-radius: 50% !important;
+		}
+	}
+}
+
 @media (max-width: 781px) {
 	.ag-site-sidebar-layout.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:only-child) {
 			flex-basis: 100% !important;

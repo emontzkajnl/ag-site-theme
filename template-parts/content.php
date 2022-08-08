@@ -39,10 +39,14 @@
 				ag_sites_posted_by();
 				echo ' | ';
 				ag_sites_posted_on();
+				if (function_exists( 'ADDTOANY_SHARE_SAVE_KIT' )) {
+					echo do_shortcode('[addtoany url="' . esc_url(get_the_permalink(get_the_ID())).'" ]');
+				}
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
+	
 	<!-- <div class="sidebar-padding"> -->
 	<?php //ag_sites_post_thumbnail(); ?>
 	<!-- </div>								 -->
@@ -83,8 +87,17 @@
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php else: ?>
-<div class="col-12 m-col-6">
-	<?php ag_sites_post_thumbnail(); 
-	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+	<?php $cat = get_the_category(get_the_ID()); ?>
+	<div class="col-12 m-col-12 l-col-6 custom-article-list">
+	<a href="<?php echo esc_url( get_permalink() ); ?>">
+	<div class="two-thirds-container">
+	<?php ag_sites_post_thumbnail(get_the_ID(), 'stm-gm-635-345'); ?>
+	</div></a>
+	
+	<?php 
+	echo '<p class="cat-text"><a href="'.esc_url(get_category_link($cat[0]->term_id)).'">'.$cat[0]->name.'</a></p>';
+	echo '<a href="'.esc_url( get_permalink() ).'"><h2>'.get_the_title().'</h2></a>';?>
+	
 </div>
 <?php endif; 
+

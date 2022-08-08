@@ -26,6 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ag-sites' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		
 		<div class="site-branding">
 			<?php
 			// the_custom_logo();
@@ -58,5 +59,6 @@
 		</nav><!-- #site-navigation -->
 		<?php //get_search_form(); ?>
 		<?php get_template_part( 'searchform' ); ?>
+		
 
 	</header><!-- #masthead -->

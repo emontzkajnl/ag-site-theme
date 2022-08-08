@@ -18,7 +18,7 @@ get_header();
 				<?php
 					$q = get_queried_object(  );
 					if (is_category(  )) {
-						echo '<h1>'.$q->category_nicename.'</h1>';
+						echo '<h1>'.$q->cat_name.'</h1>';
 					} else {
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 					}

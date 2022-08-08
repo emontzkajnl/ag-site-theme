@@ -23,6 +23,17 @@
 .site-main {
   padding-top: 150px;
 }
+.nav-container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1550px;  
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 .site-branding {
   height: 100%;
   display: flex;

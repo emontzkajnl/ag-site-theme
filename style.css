@@ -1345,6 +1345,18 @@ body {
 	padding-top: 150px;
 }
 
+.nav-container {
+	display: flex;
+	height: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1550px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
 .site-branding {
 	height: 100%;
 	display: flex;
@@ -1673,6 +1685,22 @@ table {
 	line-height: 1.2;
 	margin-top: 5px;
 	margin-bottom: 40px;
+}
+
+.two-thirds-container {
+	width: 100%;
+	position: relative;
+	height: 0;
+	padding-top: 66%;
+}
+
+.two-thirds-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 @media all and (min-width: 48em) {
@@ -10679,6 +10707,19 @@ readers do not read off random characters that represent icons */
 	line-height: 20px;
 	font-family: "poppins", sans-serif;
 	text-decoration: none;
+}
+
+.entry-meta .addtoany_shortcode {
+	margin-top: 20px;
+}
+
+.addtoany_list {
+	margin-top: 20px;
+}
+
+.addtoany_list a > span {
+	background-color: gray !important;
+	border-radius: 50% !important;
 }
 
 @media (max-width: 781px) {
