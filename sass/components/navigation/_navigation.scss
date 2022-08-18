@@ -1,6 +1,9 @@
 .main-navigation {
 	display: block;
-	// width: 100%;
+	width: 100%;
+	// position : absolute;
+	left: 0;
+	top: 100px;
 
 	ul {
 		display: none;
@@ -70,15 +73,83 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+// .menu-toggle {
+// 	display: block;
+// }
+
+.hamburger {
+	cursor: pointer;
 	display: block;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px 15px 5px auto;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: black;
 }
 
-@media screen and (min-width: 37.5em) {
+
+
+.nav-container {
+	position: relative;
+	.search-form {
+		display: none;
+	}
+	&.toggled {
+		width: 100%;
+		position: fixed;
+		height: 100vh;
+		background-color: $lightgreen;
+		top: 0;
+		flex-direction: column;
+		justify-content: flex-start;
+		.main-navigation {
+			ul {
+				display: block;
+			}
+		}
+		.site-branding {
+			display: block;
+			width: 435px;
+			max-width: 100%;
+		}
+		.bar {
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(1) {
+				transform: translateY(8px) rotate(45deg);
+			}
+			&:nth-child(3) {
+				transform: translateY(-8px) rotate(-45deg);
+			}
+		}
+		.search-form {
+			display: flex;
+		}
+	}
+}
+
+@media screen and (min-width: 47.5em) {
+
+	.bar {
+		display: none;
+	}
 
 	.menu-toggle {
 		display: none;
+	}
+
+	.nav-container {
+		.search-form {
+			display: flex;
+		}
 	}
 
 	.main-navigation {
@@ -87,6 +158,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		position: static;
 	}
 
 	.main-navigation ul {
@@ -107,6 +179,7 @@
 			}
 		}
 	}
+
 }
 
 .comment-navigation,

@@ -6,15 +6,18 @@
  */
 
 ( function() {
-	console.log('nav script');
+	console.log('nav scriptxxxx');
 	const siteNavigation = document.getElementById( 'site-navigation' );
+	const siteContainer = document.querySelector( '.nav-container' );
 
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	// const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	const button = document.querySelector( ".hamburger" );
+
 
 	// Return early if the button doesn't exist.
 	if ( 'undefined' === typeof button ) {
@@ -35,7 +38,8 @@
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
+		console.log('clicked');
+		siteContainer.classList.toggle( 'toggled' );
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
