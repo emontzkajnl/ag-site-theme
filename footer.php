@@ -30,6 +30,8 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<div class="search-pop-up">
+	<p>search pop up.</p>
+</div>
 </body>
 </html>

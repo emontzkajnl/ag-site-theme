@@ -17,5 +17,5 @@
  <form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' )); ?>">
      <label for="<?php echo esc_attr( $agsite_unique_id ); ?>"><?php _e('Search&hellip;','ag-sites') ?></label>
      <input type="search" placeholder="Search..." class="search-field" name="s" id="<?php echo esc_attr( $agsite_unique_id ); ?>">
-     <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+     <!-- <button type="submit" class="search-submit"><i class="fa fa-search"></i></button> -->
 </form>
