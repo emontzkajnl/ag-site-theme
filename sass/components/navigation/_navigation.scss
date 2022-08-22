@@ -130,8 +130,9 @@
 				transform: translateY(-8px) rotate(-45deg);
 			}
 		}
-		.search-form {
-			display: flex;
+		.search-submit {
+			display: none;
+			background-color: blue !important;
 		}
 	}
 }

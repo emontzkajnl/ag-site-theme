@@ -1376,6 +1376,7 @@ body {
 .search-form {
 	display: flex;
 	position: relative;
+	padding: 0 20px;
 }
 
 .search-form input[type="search"] {
@@ -10673,8 +10674,9 @@ readers do not read off random characters that represent icons */
 	transform: translateY(-8px) rotate(-45deg);
 }
 
-.nav-container.toggled .search-form {
-	display: flex;
+.nav-container.toggled .search-submit {
+	display: none;
+	background-color: blue !important;
 }
 
 @media screen and (min-width: 47.5em) {
