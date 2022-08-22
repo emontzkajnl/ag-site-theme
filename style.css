@@ -1361,6 +1361,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	flex-shrink: 0;
+	width: 300px;
 }
 
 .site-logo {
@@ -1400,20 +1402,21 @@ body {
 	font-style: italic;
 }
 
-.search-form .search-submit {
-	margin-left: 0;
-	margin-top: 0;
-	padding: 0 10px;
-	border: none;
-	background-color: white;
-}
-
-.search-form .search-submit .fa-search:before {
-	color: #404041;
-}
-
 .search-form label {
 	display: none !important;
+}
+
+.search-btn {
+	background: #fff;
+	padding: 1em;
+	cursor: pointer;
+	border-color: transparent;
+	font-size: 1.3rem;
+	margin-right: 65px;
+}
+
+.search-btn:hover {
+	border-color: #ccc;
 }
 
 .close-search {
@@ -1445,6 +1448,12 @@ body {
 .search-pop-up.search-open {
 	opacity: 1;
 	z-index: 999;
+}
+
+@media all and (min-width: 960px) {
+	.search-btn {
+		margin-right: 0;
+	}
 }
 
 #newsletter {
@@ -10620,7 +10629,7 @@ readers do not read off random characters that represent icons */
 	cursor: pointer;
 	display: block;
 	position: absolute;
-	top: 20px;
+	top: 60px;
 	right: 20px;
 }
 
@@ -10652,14 +10661,16 @@ readers do not read off random characters that represent icons */
 	justify-content: flex-start;
 }
 
+.nav-container.toggled .main-navigation {
+	padding-top: 100px;
+}
+
 .nav-container.toggled .main-navigation ul {
 	display: block;
 }
 
 .nav-container.toggled .site-branding {
-	display: block;
-	width: 435px;
-	max-width: 100%;
+	display: none;
 }
 
 .nav-container.toggled .bar:nth-child(2) {
@@ -10674,12 +10685,11 @@ readers do not read off random characters that represent icons */
 	transform: translateY(-8px) rotate(-45deg);
 }
 
-.nav-container.toggled .search-submit {
+.nav-container.toggled .search-btn {
 	display: none;
-	background-color: blue !important;
 }
 
-@media screen and (min-width: 47.5em) {
+@media screen and (min-width: 960px) {
 	.bar {
 		display: none;
 	}
@@ -10702,6 +10712,9 @@ readers do not read off random characters that represent icons */
 		align-items: center;
 		height: 100%;
 		margin-top: 15px;
+	}
+	.main-navigation ul li.menu-item-home {
+		display: none;
 	}
 	.main-navigation ul li a {
 		padding: 0 10px;

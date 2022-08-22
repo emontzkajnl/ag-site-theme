@@ -8,10 +8,10 @@
   // const searchPopup = document.querySelector(".search-pop-up");
   
   // const closeSearch = searchPopup.querySelector(".close-search");
-  const searchPopupBtn = document.querySelector(".search-submit");
+  const searchPopupBtn = document.querySelector(".search-btn");
   const searchPopup = document.querySelector(".search-pop-up");
   const searchClose = document.querySelector(".close-search");
-  
+  console.log('btn ',searchPopupBtn);
   searchPopupBtn.addEventListener("click", () => {
     // searchPopup.style.display = 'flex';
     searchPopup.classList.add('search-open');
