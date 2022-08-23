@@ -1643,10 +1643,6 @@ table {
 	text-align: left;
 }
 
-.read-the-magazine {
-	margin-bottom: 100px;
-}
-
 .read-the-magazine .rtm-text {
 	padding: 30px 0;
 	border-top: 1px solid #111;
@@ -1708,6 +1704,12 @@ table {
 .social-cube li a {
 	font-size: 2rem;
 	color: #434040;
+}
+
+.center-child-vertically {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .custom-article-list .section-heading {

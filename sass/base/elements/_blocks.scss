@@ -39,7 +39,7 @@
     }
 }
 .read-the-magazine {
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     .rtm-text {
         padding: 30px 0;
         border-top: 1px solid $black;
@@ -96,6 +96,11 @@
             color: $darkgray;
         }
     }
+}
+.center-child-vertically {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .custom-article-list {
     .section-heading {
