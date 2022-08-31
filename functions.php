@@ -197,9 +197,14 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
+/**
+ * Offset magazine archive page and stop pagination
+ */
+function mag_offset($query) {
+	if (is_post_type_archive('magazine') && is_main_query()) {
+		// $query->set('offset', 1);
+		$query->set('nopaging', 1);
+	}
+}
 
-
-// global $_wp_additional_image_sizes; 
-// print '<pre>'; 
-// print_r( $_wp_additional_image_sizes ); 
-// print '</pre>';
+add_action('parse_query', 'mag_offset');

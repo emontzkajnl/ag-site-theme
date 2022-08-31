@@ -1728,6 +1728,10 @@ table {
 	margin-bottom: 40px;
 }
 
+.custom-article-list.mag img {
+	width: 100%;
+}
+
 .two-thirds-container {
 	width: 100%;
 	position: relative;

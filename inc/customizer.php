@@ -87,6 +87,9 @@ add_action( 'customize_preview_init', 'ag_sites_customize_preview_js' );
 function ag_sites_customize_css() { 
 	$secondary_color = get_option('secondary_color_display'); ?>
 <style type="text/css">
+	/**
+	* customizer.php 
+	*/
 	a, a:visited {
 		color: <?php echo $secondary_color; ?>;
 	}
