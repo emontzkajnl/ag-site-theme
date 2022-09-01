@@ -39,20 +39,13 @@ get_header();
 			} ?>
 		<?php if ( have_posts() ) : 
 			$first_mag = false; ?>
-			
+		<div class="wp-block-columns ag-site-sidebar-layout">
+			<div class="wp-block-column">
 
-			
-			<?php
-			// echo 'page is '. get_query_var('paged').'<br />';
-			// print_r(count(get_posts(array('posts_per_page' => -1, 'post_type' => 'magazine'))));
-			/* Start the Loop */
-
-	
-
-
-
-			echo '<div class="row">';
-			while ( have_posts() ) :
+		
+		<div class="row">
+			<h2 class=" col-12 m-col-12">Previous Magazines</h2>
+			<?php while ( have_posts() ) :
 				the_post();
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -74,6 +67,11 @@ get_header();
 
 		endif;
 		?>
+			</div>
+			<div class="wp-block-column">
+				<p>Sidebar here. </p>
+			</div>
+		</div>
 
 	</main><!-- #main -->
 
