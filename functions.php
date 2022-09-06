@@ -88,6 +88,8 @@ function ag_sites_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+
+
 	/**
 	 * Add support for core custom logo.
 	 *
@@ -123,6 +125,9 @@ add_action( 'after_setup_theme', 'ag_sites_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function ag_sites_widgets_init() {
+	$before_widget = NULL;
+	$after_widget = NULL;
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'ag-sites' ),
@@ -134,6 +139,14 @@ function ag_sites_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(array(
+	'name' => __( 'Home Leaderboard' ),
+			'before_widget' => $before_widget,
+			'after_widget' => $after_widget,
+			// 'before_title' => $before_title,
+			// 'after_title' => $after_title
+	));
 }
 add_action( 'widgets_init', 'ag_sites_widgets_init' );
 

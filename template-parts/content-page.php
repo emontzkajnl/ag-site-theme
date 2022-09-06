@@ -14,7 +14,11 @@
 		<?php //the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	<!-- </header> --> <!-- .entry-header -->
 
-	<?php ag_sites_post_thumbnail(); ?>
+	<?php if( function_exists('the_ad_placement') ) { 
+		the_ad_placement('Leaderboard');
+	}
+	
+	ag_sites_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
