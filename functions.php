@@ -141,11 +141,12 @@ function ag_sites_widgets_init() {
 	);
 
 	register_sidebar(array(
-	'name' => __( 'Home Leaderboard' ),
+	'name' => __( 'Category Sidebar' ),
 			'before_widget' => $before_widget,
 			'after_widget' => $after_widget,
-			// 'before_title' => $before_title,
-			// 'after_title' => $after_title
+			'id'			=> 'category-sidebar',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
 	));
 }
 add_action( 'widgets_init', 'ag_sites_widgets_init' );
@@ -221,3 +222,33 @@ function mag_offset($query) {
 }
 
 add_action('parse_query', 'mag_offset');
+
+//Insert ads after third paragraph of single post content.
+add_filter( 'the_content', 'prefix_insert_post_ads' );
+function prefix_insert_post_ads( $content ) {
+	ob_start();
+	if( function_exists('the_ad_placement') ) { the_ad_placement('in-content'); }
+	$ad_code = ob_get_contents();
+	ob_end_clean();
+	if ( is_single() && ! is_admin() ) {
+		return prefix_insert_after_paragraph( $ad_code, 3, $content );
+	}
+return $content;
+}
+// Parent Function that makes the magic happen
+function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
+	$closing_p = '</p>';
+	$paragraphs = explode( $closing_p, $content );
+	foreach ($paragraphs as $index => $paragraph) {
+
+		if ( trim( $paragraph ) ) {
+			$paragraphs[$index] .= $closing_p;
+		}
+
+		if ( $paragraph_id == $index + 1 ) {
+			$paragraphs[$index] .= $insertion;
+		}
+	}
+	
+	return implode( '', $paragraphs );
+}

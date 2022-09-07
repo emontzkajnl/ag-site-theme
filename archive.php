@@ -28,7 +28,9 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 			<!-- set up two columns -->
-			<div class="col-12 m-col-9">
+			<div class="wp-block-columns ag-site-sidebar-layout">
+			<div class="wp-block-column">
+			<!-- <div class="col-12 m-col-9"> -->
 				<div class="row">
 
 			
@@ -41,21 +43,31 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
+				if ($wp_query->current_post === 4 && function_exists('the_ad_placement') ){
+					echo '</div><div style="display: flex; justify-content: center;">';
+					the_ad_placement('in-content');
+					echo '</div><div class="row">';
+				}
 				get_template_part( 'template-parts/content', 'get_post_type()' );
+				
 
-			endwhile;
-			echo '</div></div>';
-			the_posts_navigation();
+			endwhile; ?>
+			</div>
+			<?php the_posts_navigation(); ?>
+			</div>
 
-		else :
+		<?php else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
+		<div class="wp-block-column">
+		<?php get_sidebar('category'); ?>
+		</div>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

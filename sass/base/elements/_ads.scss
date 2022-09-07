@@ -3,3 +3,9 @@ div[class$="-leaderboard"], div[class$="-in-content"], div[class$="-right-rail"]
     margin-top: 50px;
     margin-bottom: 50px;
 }
+div[class$="-right-rail"] {
+    margin-top: 0;
+}
+.home div[class$="-right-rail"] {
+    margin-top: 80px;
+}

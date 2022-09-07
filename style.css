@@ -1672,11 +1672,13 @@ table {
 .social-cube {
 	background-color: #e8f4d8;
 	width: 300px;
-	height: 300px;
+	height: 200px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .social-cube h4 {
@@ -1704,6 +1706,10 @@ table {
 .social-cube li a {
 	font-size: 2rem;
 	color: #434040;
+}
+
+.home .social-cube {
+	height: 300px;
 }
 
 .center-child-vertically {
@@ -1769,6 +1775,14 @@ div[class$="-leaderboard"], div[class$="-in-content"], div[class$="-right-rail"]
 	text-align: center;
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
+
+div[class$="-right-rail"] {
+	margin-top: 0;
+}
+
+.home div[class$="-right-rail"] {
+	margin-top: 80px;
 }
 
 /* Links

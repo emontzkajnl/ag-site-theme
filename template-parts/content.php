@@ -96,7 +96,7 @@
 	
 	<?php 
 	echo '<p class="cat-text"><a href="'.esc_url(get_category_link($cat[0]->term_id)).'">'.$cat[0]->name.'</a></p>';
-	echo '<a href="'.esc_url( get_permalink() ).'"><h2>'.get_the_title().'</h2></a>';?>
+	echo '<h2><a class="title-link" href="'.esc_url( get_permalink() ).'">'.get_the_title().'</a></h2>';?>
 	
 </div>
 <?php endif; 

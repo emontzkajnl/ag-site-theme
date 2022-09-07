@@ -69,12 +69,12 @@ get_header();
 		?>
 			</div>
 			<div class="wp-block-column">
-				<p>Sidebar here. </p>
+				<?php get_sidebar('category-sidebar'); ?>
 			</div>
 		</div>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

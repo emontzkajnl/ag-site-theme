@@ -6,7 +6,7 @@
 	
 	<?php 
 	
-	echo '<h2><a href="'.esc_url( get_permalink() ).'">'.get_the_title().'</a></h2>';?>
+	echo '<h2><a class="title-link" href="'.esc_url( get_permalink() ).'">'.get_the_title().'</a></h2>';?>
 	
 </div>
 <?php //endif; $first_mag = false; ?>
