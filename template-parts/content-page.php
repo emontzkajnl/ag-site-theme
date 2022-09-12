@@ -17,6 +17,7 @@
 	<?php if( function_exists('the_ad_placement') ) { 
 		the_ad_placement('Leaderboard');
 	}
+	the_ad(7324); 
 	
 	ag_sites_post_thumbnail(); ?>
 

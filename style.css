@@ -1754,7 +1754,44 @@ table {
 	object-fit: cover;
 }
 
+.recipe-block {
+	border-top: 1px solid #197b30;
+	border-bottom: 1px solid #197b30;
+	padding: 0 0 30px;
+	margin: 30px 0 30px 30px;
+}
+
+.recipe-block .page-header {
+	text-align: center;
+}
+
+.article-callout {
+	margin: 50px 0;
+}
+
+.article-callout img {
+	width: 100% !important;
+	height: 100% !important;
+	max-width: none;
+	object-fit: cover;
+}
+
+.article-callout .ac-text {
+	padding: 30px;
+	background-color: #e8f4d8;
+}
+
 @media all and (min-width: 48em) {
+	.article-callout {
+		display: flex;
+		flex-direction: row;
+	}
+	.article-callout .ac-img-container {
+		flex-basis: 50%;
+	}
+	.article-callout .ac-text {
+		flex-basis: 50%;
+	}
 	.ag-featured-post-sidebar .faps-featured {
 		height: 100%;
 	}

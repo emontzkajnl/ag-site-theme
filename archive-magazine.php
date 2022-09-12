@@ -19,7 +19,11 @@ get_header();
 
 			<header class="page-header">
 				<?php
-					$q = get_queried_object(  );
+
+			if( function_exists('the_ad_placement') ) { 
+				the_ad_placement('leaderboard');
+			}
+			$q = get_queried_object(  );
 					
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 				
@@ -39,8 +43,6 @@ get_header();
 			} ?>
 		<?php if ( have_posts() ) : 
 			$first_mag = false; ?>
-		<div class="wp-block-columns ag-site-sidebar-layout">
-			<div class="wp-block-column">
 
 		
 		<div class="row">
@@ -68,10 +70,8 @@ get_header();
 		endif;
 		?>
 			</div>
-			<div class="wp-block-column">
-				<?php get_sidebar('category-sidebar'); ?>
-			</div>
-		</div>
+		
+		
 
 	</main><!-- #main -->
 
