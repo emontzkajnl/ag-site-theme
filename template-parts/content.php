@@ -17,12 +17,12 @@
 		// else :
 			// the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		// endif;
-
+		$categories = get_the_terms( get_the_ID(  ), 'category' );
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
 				<?php
-				$categories = get_the_terms( get_the_ID(  ), 'category' );
+				
 				if ($categories) : ?>
 					<div class="category-wrap">
 						<ul>
@@ -42,6 +42,7 @@
 				if (function_exists( 'ADDTOANY_SHARE_SAVE_KIT' )) {
 					echo do_shortcode('[addtoany url="' . esc_url(get_the_permalink(get_the_ID())).'" ]');
 				}
+				
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -75,10 +76,45 @@
 				'after'  => '</div>',
 			)
 		);
+		// you might also like section
+		if ($categories) {
+			$cat_ids = [];
+			foreach($categories as $c){
+				$cat_ids[] = $c->term_id;
+			}
+			$rel_args = array(
+				'post_type'         => 'post',
+				'post_status'       => 'publish',
+				'posts_per_page'    => 3,
+				'orderby'           => 'rand',
+				'category__in'      => $cat_ids
+			);
+			$rel_articles = new WP_Query($rel_args);
+			if ($rel_articles->have_posts( )): ?>
+				<h3>You Might Also Like</h3>
+				<div class="related-articles">
+				<ul class="row">
+				<?php while ($rel_articles->have_posts()): $rel_articles->the_post(); ?>
+				<li class="col-12 m-col-4">
+					<a href="<?php echo get_the_permalink(); ?>">
+						<div class="two-thirds-container">
+							<?php echo get_the_post_thumbnail( ); ?>
+						</div>
+					</a>
+						<?php $yoast_primary_key = get_post_meta( get_the_ID( ), '_yoast_wpseo_primary_category', TRUE );  
+						if ($yoast_primary_key) { echo '<p class="cat-text"><a href="'.get_category_link( $yoast_primary_key ).'">'.get_cat_name($yoast_primary_key).'</a></p>'; } ?>
+						<h3><a class="title-link" href="<?php echo get_the_permalink(  ); ?>"><?php echo get_the_title(); ?></a></h3>
+				</li>
+				<?php endwhile;
+				echo '</ul></div>';
+			endif;
+			wp_reset_postdata( );
+		}
 		?>
+		
 	</div><!-- .entry-content -->
 	<div class="wp-block-column">
-
+		<?php get_sidebar(); ?>
 	</div>
 	</div>
 
