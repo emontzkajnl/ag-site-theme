@@ -10,13 +10,12 @@
 ?>
 <?php if ( is_singular() ) : ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if( function_exists('the_ad_placement') ) { 
+			the_ad_placement('leaderboard');
+		} ?>
 	<header class="entry-header sidebar-padding">
 		<?php
-		// if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		// else :
-			// the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		// endif;
+		
 		$categories = get_the_terms( get_the_ID(  ), 'category' );
 		if ( 'post' === get_post_type() ) :
 			?>
@@ -33,9 +32,8 @@
 					</div>
 					
 				<?php endif;
-				
 
-				
+				the_title( '<h1 class="entry-title">', '</h1>' );
 				ag_sites_posted_by();
 				echo ' | ';
 				ag_sites_posted_on();

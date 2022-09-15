@@ -56,6 +56,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-family: "Lora", Times New Roman, serif;
 }
 
+--font-acumin {
+	font-family: "acumin-pro", sans-serif;
+}
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -10886,6 +10890,11 @@ readers do not read off random characters that represent icons */
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
+}
+
+figcaption {
+	font-size: .93rem;
+	font-family: "acumin-pro", sans-serif;
 }
 
 .category-wrap ul {

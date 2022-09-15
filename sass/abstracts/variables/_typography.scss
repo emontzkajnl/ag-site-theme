@@ -9,11 +9,16 @@ $font__line-height-pre: 1.6;
 
 $font__poppins: "Poppins", Helvetica, sans-serif;
 $font__lora: "Lora", Times New Roman, serif;
+$font__acumin: "acumin-pro", sans-serif;
+
 
 --font-poppins {
     font-family: $font__poppins;
 } 
 --font-lora {
     font-family: $font__lora;
+} 
+--font-acumin {
+    font-family: $font__acumin;
 } 
 

@@ -16,6 +16,9 @@ get_header();
 
 			<header class="page-header">
 				<?php
+					if( function_exists('the_ad_placement') ) { 
+						the_ad_placement('leaderboard');
+					}
 					$q = get_queried_object(  );
 					if (is_category(  )) {
 						echo '<h1>'.$q->cat_name.'</h1>';

@@ -11,6 +11,9 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main container">
+    <?php if( function_exists('the_ad_placement') ) { 
+			the_ad_placement('leaderboard');
+		} ?>
         <div class="row">
 
 		<?php
