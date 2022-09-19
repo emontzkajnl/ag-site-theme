@@ -40,6 +40,7 @@
 				if (function_exists( 'ADDTOANY_SHARE_SAVE_KIT' )) {
 					echo do_shortcode('[addtoany url="' . esc_url(get_the_permalink(get_the_ID())).'" ]');
 				}
+				echo '<p class="post-excerpt">'.get_the_excerpt( ).'</p>';
 				
 				?>
 			</div><!-- .entry-meta -->

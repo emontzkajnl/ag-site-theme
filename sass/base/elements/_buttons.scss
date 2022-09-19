@@ -6,9 +6,11 @@ input[type="submit"] {
 	border-color: $color__border-button;
 	border-radius: 3px;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
+	// color: rgba(0, 0, 0, 0.8);
+	color: #fff;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
+	font-family: $font__acumin;
 
 	&:hover {
 		border-color: $color__border-button-hover;

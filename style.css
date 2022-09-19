@@ -1484,6 +1484,7 @@ body {
 	border-radius: 0;
 	height: 50px;
 	cursor: pointer;
+	font-family: "acumin-pro", sans-serif;
 }
 
 #newsletter input[type=text] {
@@ -1771,10 +1772,26 @@ table {
 	border-bottom: 1px solid #197b30;
 	padding: 0 0 30px;
 	margin: 30px 0 30px 30px;
+	width: 100%;
 }
 
 .recipe-block .page-header {
 	text-align: center;
+}
+
+.recipe-block .recipe-block-title {
+	text-align: center;
+	font-family: "Lora", Times New Roman, serif;
+	font-size: 1.8125rem;
+}
+
+.recipe-block .recipe-block-text {
+	font-family: "acumin-pro", sans-serif;
+}
+
+.recipe-block button {
+	text-transform: uppercase;
+	font-size: 1.25rem;
 }
 
 .article-callout {
@@ -1788,9 +1805,31 @@ table {
 	object-fit: cover;
 }
 
-.article-callout .ac-text {
+.article-callout__text {
 	padding: 30px;
 	background-color: #e8f4d8;
+}
+
+.article-callout__category {
+	font-size: 1.75rem;
+	font-family: "acumin-pro", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.article-callout__category a {
+	text-decoration: none;
+	color: #197b30;
+}
+
+.article-callout__title {
+	font-family: "acumin-pro", sans-serif;
+	font-size: 2.125rem;
+}
+
+.article-callout__title a {
+	text-decoration: none;
+	color: #414040 !important;
 }
 
 .related-articles li {
@@ -1801,6 +1840,11 @@ table {
 	font-size: 1.5rem;
 	line-height: 1.3;
 	margin-top: 0;
+}
+
+.callout-box {
+	padding: 20px;
+	border: 40px solid #e8f4d8;
 }
 
 @media all and (min-width: 48em) {
@@ -1827,6 +1871,13 @@ table {
 	}
 	.read-the-magazine .rtm-text {
 		margin-left: 30px;
+	}
+}
+
+@media all and (min-width: 80em) {
+	.recipe-block {
+		width: 50%;
+		float: right;
 	}
 }
 
@@ -1897,10 +1948,11 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
+	background: #197b30;
+	color: #fff;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
+	font-family: "acumin-pro", sans-serif;
 }
 
 button:hover,
@@ -10890,6 +10942,12 @@ readers do not read off random characters that represent icons */
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
+}
+
+.post-excerpt {
+	font-size: 1.5rem;
+	font-family: "acumin-pro", sans-serif;
+	margin-bottom: .5em;
 }
 
 figcaption {

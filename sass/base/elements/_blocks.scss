@@ -150,13 +150,26 @@
     border-bottom: 1px solid $green;
     padding: 0 0 30px;
     margin: 30px 0 30px 30px;
+    width: 100%;
     .page-header {
         text-align: center;
+    }
+    .recipe-block-title {
+        text-align: center;
+        font-family: $font__lora;
+        font-size: 1.8125rem;
+    }
+    .recipe-block-text {
+        font-family: $font__acumin;
+    }
+    button {
+        text-transform: uppercase;
+        font-size: 1.25rem;
     }
 }
 .article-callout {
     margin: 50px 0;
-    .ac-img-container {
+    &__img-container {
         // width: 100%;
         // height: 100%;
     }
@@ -166,9 +179,27 @@
         max-width: none;
         object-fit: cover;
     }
-    .ac-text {
+    &__text {
         padding: 30px;
         background-color: $lightgreen;
+    }
+    &__category {
+        font-size: 1.75rem;
+        font-family: $font__acumin;
+        text-transform: uppercase;
+        font-weight: bold;
+        a {
+            text-decoration: none;
+            color: $green;
+        }
+    }
+    &__title {
+        font-family: $font__acumin;
+        font-size: 2.125rem;
+        a {
+            text-decoration: none;
+            color: $gray2 !important;
+        }
     }
 }
 .related-articles {
@@ -180,6 +211,10 @@
         line-height: 1.3;
         margin-top: 0;
     }
+}
+.callout-box {
+    padding: 20px;
+    border: 40px solid $lightgreen;
 }
 @media all and (min-width: 48em) {
     .article-callout {
@@ -209,5 +244,12 @@
         .rtm-text {
             margin-left: 30px;
         }
+    }
+
+}
+@media all and (min-width: 80em) {
+    .recipe-block {
+        width: 50%;
+        float: right;
     }
 }
