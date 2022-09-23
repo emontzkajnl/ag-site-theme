@@ -21,3 +21,6 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+button, input[type="button"] {
+	cursor: pointer;
+}
