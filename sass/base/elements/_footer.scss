@@ -22,6 +22,16 @@
         }
     }
 }
+.footer-social {
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    li {
+        font-size: 30px;
+        list-style: none;
+    }
+
+}
 .site-footer {
     background-color: $darkgray;
     color: white;

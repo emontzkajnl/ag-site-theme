@@ -1497,6 +1497,17 @@ body {
 	font-style: italic;
 }
 
+.footer-social {
+	padding-left: 0;
+	margin-left: 0;
+	display: flex;
+}
+
+.footer-social li {
+	font-size: 30px;
+	list-style: none;
+}
+
 .site-footer {
 	background-color: #434040;
 	color: white;
