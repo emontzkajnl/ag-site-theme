@@ -31,17 +31,17 @@
 	margin: 0 0 1.5em;
 }
 
-.page-header {
-	font-family: "poppins", sans-serif;
-	color: $lightgreen2;
-	text-transform: uppercase;
-	font-size: 1.625rem;
-	// padding-left: 15px;
-	h1 {
-		font-size: 1.625rem;
-		color: $green;
-	}
-}
+// .page-header {
+// 	font-family: "poppins", sans-serif;
+// 	color: $lightgreen2;
+// 	text-transform: uppercase;
+// 	font-size: 1.625rem;
+// 	// padding-left: 15px;
+// 	h1 {
+// 		font-size: 1.625rem;
+// 		color: $green;
+// 	}
+// }
 
 .container {
 	max-width: 1366px;
@@ -110,6 +110,8 @@ figcaption {
 }
 @media (min-width: 782px) {
 	.ag-site-sidebar-layout {
+		position: relative;
+		overflow: visible;
 		.wp-block-column {
 			&:first-child {
 				flex-basis: auto;
@@ -117,7 +119,10 @@ figcaption {
 			&:last-child {
 				flex-basis: 330px !important;
 				flex-shrink: 0 !important;
-				position: sticky;
+				.widget-area {
+					position: sticky;
+					top: 200px;
+				}
 			}
 		}
 	}

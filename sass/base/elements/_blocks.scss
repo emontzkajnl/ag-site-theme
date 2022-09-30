@@ -40,7 +40,7 @@
 }
 .read-the-magazine {
     // margin-bottom: 100px;
-    .rtm-text {
+    &__text {
         padding: 30px 0;
         border-top: 1px solid $black;
         border-bottom: 1px solid $black;
@@ -48,15 +48,22 @@
         font-weight: 400;
         color: $gray2;
 
-        h4 {
-            margin-top: 0;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            font-family: "acumin-pro";
-            font-weight: 700;
-        }
+        // h4 {
+        //     margin-top: 0;
+        //     text-transform: uppercase;
+        //     font-size: 1.5rem;
+        //     font-family: "acumin-pro";
+        //     font-weight: 700;
+        // }
     }
-    .rtm-button {
+    &__title {
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-family: "acumin-pro";
+        font-weight: 700;
+    }
+    &__button {
         text-transform: uppercase;
         padding: 10px 15px;
         border: 1px solid $black;
@@ -76,9 +83,10 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    h4 {
+    .section-heading {
         margin-top: 0;
         margin-bottom: 10px;
+        font-size: 1.5rem;
     }
     ul {
         margin: 0;
@@ -236,24 +244,25 @@
             height: 100%;
         }
     }
-    .read-the-magazine {
-        img {
-            max-width: 320px;
-        }
-        .mag-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        .rtm-text {
-            margin-left: 30px;
-        }
-    }
+
 
 }
 @media all and (min-width: 80em) {
     .recipe-block {
         width: 50%;
         float: right;
+    }
+    .read-the-magazine {
+        img {
+            max-width: 320px;
+        }
+        &__mag-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &__text {
+            margin-left: 30px;
+        }
     }
 }

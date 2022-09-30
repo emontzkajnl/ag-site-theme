@@ -25,7 +25,7 @@ get_header();
 			}
 			$q = get_queried_object(  );
 					
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_title( '<h1 class="page-title">', '</h1>' );
 				
 				//  the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
@@ -37,6 +37,7 @@ get_header();
 			));
 			if ($first) {
 				$calameo = get_post_meta(get_the_ID(  ), 'calameo_id');
+				echo '<div class="col-12 m-col-12">'.get_the_content($first[0]->ID).'</div>';
 				echo '<div class="col-12 m-col-12"><iframe style="margin: 0 auto;" src="//v.calameo.com/?bkcode=' . $calameo[0] . '&amp;page=1" width="100%" height="800" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div>'; 
 			} else {
 				echo 'there is no post.';

@@ -1264,6 +1264,13 @@ h6 {
 	clear: both;
 }
 
+.page-title {
+	font-family: "Poppins", Helvetica, sans-serif;
+	color: #197b30;
+	text-transform: uppercase;
+	font-size: 1.625rem;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -1474,6 +1481,7 @@ body {
 	color: #111;
 	padding-top: 70px;
 	padding-bottom: 80px;
+	margin-top: 50px;
 }
 
 #newsletter input[type=submit] {
@@ -1506,6 +1514,7 @@ body {
 .footer-social li {
 	font-size: 30px;
 	list-style: none;
+	margin-right: 10px;
 }
 
 .site-footer {
@@ -1673,7 +1682,7 @@ table {
 	text-align: left;
 }
 
-.read-the-magazine .rtm-text {
+.read-the-magazine__text {
 	padding: 30px 0;
 	border-top: 1px solid #111;
 	border-bottom: 1px solid #111;
@@ -1682,7 +1691,7 @@ table {
 	color: #414040;
 }
 
-.read-the-magazine .rtm-text h4 {
+.read-the-magazine__title {
 	margin-top: 0;
 	text-transform: uppercase;
 	font-size: 1.5rem;
@@ -1690,7 +1699,7 @@ table {
 	font-weight: 700;
 }
 
-.read-the-magazine .rtm-button {
+.read-the-magazine__button {
 	text-transform: uppercase;
 	padding: 10px 15px;
 	border: 1px solid #111;
@@ -1711,9 +1720,10 @@ table {
 	margin-right: auto;
 }
 
-.social-cube h4 {
+.social-cube .section-heading {
 	margin-top: 0;
 	margin-bottom: 10px;
+	font-size: 1.5rem;
 }
 
 .social-cube ul {
@@ -1883,23 +1893,23 @@ table {
 	.ag-featured-post-sidebar .faps-featured {
 		height: 100%;
 	}
-	.read-the-magazine img {
-		max-width: 320px;
-	}
-	.read-the-magazine .mag-container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-	.read-the-magazine .rtm-text {
-		margin-left: 30px;
-	}
 }
 
 @media all and (min-width: 80em) {
 	.recipe-block {
 		width: 50%;
 		float: right;
+	}
+	.read-the-magazine img {
+		max-width: 320px;
+	}
+	.read-the-magazine__mag-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.read-the-magazine__text {
+		margin-left: 30px;
 	}
 }
 
@@ -10882,7 +10892,6 @@ readers do not read off random characters that represent icons */
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		margin-top: 15px;
 	}
 	.main-navigation ul li.menu-item-home {
 		display: none;
@@ -10951,18 +10960,6 @@ readers do not read off random characters that represent icons */
 	margin: 0 0 1.5em;
 }
 
-.page-header {
-	font-family: "poppins", sans-serif;
-	color: #8cc63e;
-	text-transform: uppercase;
-	font-size: 1.625rem;
-}
-
-.page-header h1 {
-	font-size: 1.625rem;
-	color: #197b30;
-}
-
 .container {
 	max-width: 1366px;
 	padding-left: 15px;
@@ -11028,13 +11025,20 @@ figcaption {
 }
 
 @media (min-width: 782px) {
+	.ag-site-sidebar-layout {
+		position: relative;
+		overflow: visible;
+	}
 	.ag-site-sidebar-layout .wp-block-column:first-child {
 		flex-basis: auto;
 	}
 	.ag-site-sidebar-layout .wp-block-column:last-child {
 		flex-basis: 330px !important;
 		flex-shrink: 0 !important;
+	}
+	.ag-site-sidebar-layout .wp-block-column:last-child .widget-area {
 		position: sticky;
+		top: 200px;
 	}
 	.sidebar-padding {
 		padding-right: 350px;

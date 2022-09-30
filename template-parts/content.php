@@ -9,10 +9,15 @@
 
 ?>
 <?php if ( is_singular() ) : ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('entry-content '); ?>>
 	<?php if( function_exists('the_ad_placement') ) { 
 			the_ad_placement('leaderboard');
 		} ?>
+
+
+	
+	<div class="ag-site-sidebar-layout wp-block-columns">
+	<div class="wp-block-column">
 	<header class="entry-header sidebar-padding">
 		<?php
 		
@@ -44,13 +49,6 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-	
-	<!-- <div class="sidebar-padding"> -->
-	<?php //ag_sites_post_thumbnail(); ?>
-	<!-- </div>								 -->
-	
-	<div class="ag-site-sidebar-layout wp-block-columns">
-	<div class="entry-content wp-block-column">
 		<?php
 		the_content(
 			sprintf(
@@ -114,7 +112,7 @@
 		?>
 		
 	</div><!-- .entry-content -->
-	<div class="wp-block-column">
+	<div class="wp-block-column sticky">
 		<?php get_sidebar(); ?>
 	</div>
 	</div>

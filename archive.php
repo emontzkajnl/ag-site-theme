@@ -19,12 +19,6 @@ get_header();
 					if( function_exists('the_ad_placement') ) { 
 						the_ad_placement('leaderboard');
 					}
-					$q = get_queried_object(  );
-					if (is_category(  )) {
-						echo '<h1>'.$q->cat_name.'</h1>';
-					} else {
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-					}
 					// print_r($q);
 				
 				// the_archive_description( '<div class="archive-description">', '</div>' );
@@ -34,6 +28,12 @@ get_header();
 			<div class="wp-block-columns ag-site-sidebar-layout">
 			<div class="wp-block-column">
 			<!-- <div class="col-12 m-col-9"> -->
+			<?php $q = get_queried_object(  );
+					if (is_category(  )) {
+						echo '<h1 class="page-title">'.$q->cat_name.'</h1>';
+					} else {
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+					} ?>
 				<div class="row">
 
 			

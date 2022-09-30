@@ -6,3 +6,10 @@ h5,
 h6 {
 	clear: both;
 }
+
+.page-title {
+	font-family: $font__poppins;
+	color: $green;
+	text-transform: uppercase;
+	font-size: 1.625rem;
+}
