@@ -1442,7 +1442,7 @@ body {
 .close-search {
 	position: absolute;
 	top: 30px;
-	right: 30px;
+	right: 10%;
 	font-size: 60px;
 }
 
@@ -10887,16 +10887,19 @@ readers do not read off random characters that represent icons */
 		justify-content: center;
 		position: static;
 	}
+	.main-navigation a:hover {
+		background-color: #ccc;
+	}
 	.main-navigation ul {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
 	}
-	.main-navigation ul li.menu-item-home {
+	.main-navigation ul > li.menu-item-home {
 		display: none;
 	}
-	.main-navigation ul li a {
+	.main-navigation ul > li a {
 		padding: 0 10px;
 		color: #404041;
 		font-size: 1.5rem;
@@ -10904,6 +10907,36 @@ readers do not read off random characters that represent icons */
 		font-weight: normal;
 		font-size: 1.375rem;
 		letter-spacing: .2rem;
+	}
+	.main-navigation ul ul {
+		top: 25px;
+		padding-top: 15px;
+		height: auto;
+		flex-direction: column;
+	}
+	.main-navigation ul ul li {
+		background: white;
+	}
+	.main-navigation ul ul li:last-child a {
+		border-bottom: none;
+	}
+	.main-navigation ul ul a {
+		width: 300px;
+		font-size: 1rem;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid gray;
+	}
+	.menu-item-has-children > a {
+		position: relative;
+	}
+	.menu-item-has-children > a::after {
+		content: "^";
+		position: absolute;
+		right: 2px;
+		top: 5px;
+		font-size: 12px;
+		transform: rotate(0.5turn);
 	}
 }
 
@@ -10978,6 +11011,14 @@ figcaption {
 	font-family: "acumin-pro", sans-serif;
 }
 
+.home .theiaPostSlider_slides {
+	overflow: visible;
+}
+
+.home .theiaPostSlider_slides > div {
+	overflow: visible;
+}
+
 .category-wrap ul {
 	padding: 0;
 	margin-left: 0;
@@ -11025,6 +11066,9 @@ figcaption {
 }
 
 @media (min-width: 782px) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:first-child) {
+		margin-left: 30px;
+	}
 	.ag-site-sidebar-layout {
 		position: relative;
 		overflow: visible;
@@ -11033,15 +11077,12 @@ figcaption {
 		flex-basis: auto;
 	}
 	.ag-site-sidebar-layout .wp-block-column:last-child {
-		flex-basis: 330px !important;
+		flex-basis: 300px !important;
 		flex-shrink: 0 !important;
 	}
 	.ag-site-sidebar-layout .wp-block-column:last-child .widget-area {
 		position: sticky;
 		top: 200px;
-	}
-	.sidebar-padding {
-		padding-right: 350px;
 	}
 }
 

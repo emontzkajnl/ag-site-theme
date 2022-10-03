@@ -6,7 +6,6 @@
  */
 
 ( function() {
-	console.log('nav scriptxxxx');
 	const siteNavigation = document.getElementById( 'site-navigation' );
 	const siteContainer = document.querySelector( '.nav-container' );
 

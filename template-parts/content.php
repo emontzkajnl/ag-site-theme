@@ -18,7 +18,7 @@
 	
 	<div class="ag-site-sidebar-layout wp-block-columns">
 	<div class="wp-block-column">
-	<header class="entry-header sidebar-padding">
+	<header class="entry-header">
 		<?php
 		
 		$categories = get_the_terms( get_the_ID(  ), 'category' );

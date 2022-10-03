@@ -61,6 +61,13 @@ figcaption {
 	font-family: $font__acumin;
 }
 
+.home .theiaPostSlider_slides {
+	overflow: visible;
+	> div {
+		overflow: visible;
+	}
+}
+
 .category-wrap {
 	ul {
 		padding: 0;
@@ -109,15 +116,19 @@ figcaption {
 	}
 }
 @media (min-width: 782px) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:first-child) {
+		margin-left: 30px;
+	}
 	.ag-site-sidebar-layout {
 		position: relative;
 		overflow: visible;
+		// gap: 30px;
 		.wp-block-column {
 			&:first-child {
 				flex-basis: auto;
 			}
 			&:last-child {
-				flex-basis: 330px !important;
+				flex-basis: 300px !important;
 				flex-shrink: 0 !important;
 				.widget-area {
 					position: sticky;
@@ -127,6 +138,6 @@ figcaption {
 		}
 	}
 	.sidebar-padding {
-		padding-right: 350px;
+		// padding-right: 350px;
 	}
 }
