@@ -1518,7 +1518,6 @@ body {
 }
 
 .site-footer {
-	background-color: #434040;
 	color: white;
 	padding-bottom: 80px;
 }
@@ -1705,7 +1704,6 @@ table {
 	border: 1px solid #111;
 	display: inline-block;
 	text-decoration: none;
-	color: #111;
 }
 
 .social-cube {
@@ -11036,7 +11034,6 @@ figcaption {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #fff;
-	background: #197b30;
 	line-height: 20px;
 	font-family: "poppins", sans-serif;
 	text-decoration: none;

@@ -31,7 +31,7 @@
 					<div class="category-wrap">
 						<ul>
 							<?php foreach ($categories as $category): ?>
-								<li><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?></a></li>
+								<li><a class="background__primary" href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?></a></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>

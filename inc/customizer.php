@@ -26,6 +26,13 @@ function ag_sites_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->add_setting( 'primary_color_display',  array(
+		'type'			=> 'option',
+		'capability'	=> 'edit_theme_options',
+		'default'		=> '#333333',
+		'transport' 	=> 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
 	$wp_customize->add_setting( 'secondary_color_display',  array(
 		'type'			=> 'option',
 		'capability'	=> 'edit_theme_options',
@@ -33,10 +40,27 @@ function ag_sites_customize_register( $wp_customize ) {
 		'transport' 	=> 'refresh',
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
+	$wp_customize->add_setting( 'footer_background_display',  array(
+		'type'			=> 'option',
+		'capability'	=> 'edit_theme_options',
+		'default'		=> '#333333',
+		'transport' 	=> 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
+		'label' => __( 'Primary Color', 'ag-sites'), 
+		'section' => 'colors',
+		'settings'		=> 'primary_color_display'
+	)));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(
 		'label' => __( 'Secondary Color', 'ag-sites'), 
 		'section' => 'colors',
 		'settings'		=> 'secondary_color_display'
+	)));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_background', array(
+		'label' => __( 'Footer Background', 'ag-sites'), 
+		'section' => 'colors',
+		'settings'		=> 'footer_background_display'
 	)));
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
@@ -85,16 +109,34 @@ function ag_sites_customize_preview_js() {
 add_action( 'customize_preview_init', 'ag_sites_customize_preview_js' );
 
 function ag_sites_customize_css() { 
-	$secondary_color = get_option('secondary_color_display'); ?>
+	$secondary_color = get_option('secondary_color_display');
+	$primary_color = get_option('primary_color_display');
+	$footer_background = get_option('footer_background_display'); ?>
 <style type="text/css">
 	/**
 	* customizer.php 
 	*/
 	a, a:visited {
+		color: <?php echo $primary_color; ?>;
+	}
+	#newsletter input[type="submit"] {
+		background-color: <?php echo $primary_color; ?>;
+	}
+	.color__primary {
+		color: <?php echo $primary_color; ?>;
+	}
+	.color__secondary {
 		color: <?php echo $secondary_color; ?>;
 	}
-	#newsletter input[type="submit"], .category-wrap a {
+	.background__primary {
+		background-color: <?php echo $primary_color; ?>;
+	}
+	.background__secondary {
 		background-color: <?php echo $secondary_color; ?>;
+	}
+
+	.site-footer {
+		background-color: <?php echo $footer_background; ?>;
 	}
 </style>
 <?php }
