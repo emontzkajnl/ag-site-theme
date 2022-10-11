@@ -18,10 +18,11 @@
 		the_ad_placement('leaderboard');
 	}
 	
-	ag_sites_post_thumbnail(); ?>
+	// ag_sites_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
+		
 		the_content();
 
 		wp_link_pages(
