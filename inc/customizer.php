@@ -23,6 +23,15 @@
 // }
 
 function ag_sites_customize_register( $wp_customize ) {
+	//Sections 
+	$wp_customize->add_section('fonts', array(
+		'title'	=> __( 'Fonts'),
+		'description'	=> __( 'Add font families to theme'),
+		'priority'	=> 160,
+		// 'capability'	=> 'edit_theme_options'
+	));
+
+	// Settings
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -47,6 +56,10 @@ function ag_sites_customize_register( $wp_customize ) {
 		'transport' 	=> 'refresh',
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
+	$wp_customize->add_setting('serif_font', array('default' => 'Times New Roman, serif'));
+	$wp_customize->add_setting('sans_serif_font', array('default' => 'Arial, sans-serif'));
+
+	// Controls
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
 		'label' => __( 'Primary Color', 'ag-sites'), 
 		'section' => 'colors',
@@ -62,6 +75,22 @@ function ag_sites_customize_register( $wp_customize ) {
 		'section' => 'colors',
 		'settings'		=> 'footer_background_display'
 	)));
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'serif_font', array(
+				'label'	=> __('Serif Font', 'ag-sites'),
+				'section'	=> 'fonts',
+				'settings'	=> 'serif_font'
+			)
+		)
+	);
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'sans_serif_font', array(
+				'label'	=> __('Sans-serif Font', 'ag-sites'),
+				'section'	=> 'fonts',
+				'settings'	=> 'sans_serif_font'
+			)
+		)
+	);
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
@@ -138,6 +167,30 @@ function ag_sites_customize_css() {
 	.site-footer {
 		background-color: <?php echo $footer_background; ?>;
 	}
+	.font__sans-serif, .cat-text {
+		font-family: <?php echo  get_theme_mod('sans_serif_font'); ?>;
+		font-weight: 400;
+	}
+	.font__serif {
+		font-family: <?php echo  get_theme_mod('serif_font'); ?>;
+		font-weight: 400;
+	}
+	@font-face {
+		font-family: Lora;
+		font-weight: 400;
+    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Lora-Medium.ttf');
+	}
+	@font-face {
+		font-family: Roboto;
+		font-weight: 400;
+    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Medium.ttf');
+	}
+	@font-face {
+		font-family: Roboto;
+		font-weight: 100;
+    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Thin.ttf');
+	}
+
 </style>
 <?php }
 

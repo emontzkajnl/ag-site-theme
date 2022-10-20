@@ -86,8 +86,9 @@
 			);
 			$rel_articles = new WP_Query($rel_args);
 			if ($rel_articles->have_posts( )): ?>
+			<div class="related-articles">
 				<h3 class="section-heading">You Might Also Like</h3>
-				<div class="related-articles">
+				
 				<ul class="row">
 				<?php while ($rel_articles->have_posts()): $rel_articles->the_post(); ?>
 				<li class="col-12 m-col-4">

@@ -52,6 +52,12 @@ big {
 
 .cat-text {
 	font-weight: bold;
-	color: $lightgreen2;
+	// color: $lightgreen2;
 	text-transform: uppercase;
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

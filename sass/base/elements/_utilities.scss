@@ -1,0 +1,27 @@
+// apply to ul element
+.unstyle-list {
+	margin-left: 0;
+	li {
+		list-style: none;
+	}
+}
+// apply to "a" element
+a.unstyle-link {
+    color: inherit !important;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover, &:visited, &:active {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+.align-center {
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}
+.align-left {
+    text-align: left;
+}
