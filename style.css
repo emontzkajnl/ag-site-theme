@@ -1524,6 +1524,41 @@ body {
 	margin-right: 10px;
 }
 
+.header-social {
+	padding-left: 0;
+	margin: 0 1em 0 0;
+	display: flex;
+}
+
+.header-social li {
+	font-size: 20px;
+	list-style: none;
+	margin-right: 10px;
+	position: relative;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+}
+
+.header-social li.facebook a {
+	left: 10px;
+}
+
+.header-social li.youtube a {
+	left: 7px;
+}
+
+.header-social a {
+	position: absolute;
+	color: white;
+	top: 7px;
+	left: 8px;
+}
+
+.header-social a:visited, .header-social a:focus, .header-social a:active, .header-social a:hover {
+	color: white;
+}
+
 .site-footer {
 	color: white;
 	padding-bottom: 80px;
@@ -1850,6 +1885,10 @@ table {
 	font-size: 2.5rem;
 }
 
+.ilfb-afps__excerpt {
+	font-size: 1.25rem;
+}
+
 .recipe-block {
 	border-top: 1px solid #197b30;
 	border-bottom: 1px solid #197b30;
@@ -1916,15 +1955,15 @@ table {
 	color: #414040 !important;
 }
 
-.related-articles ul {
+.afbs ul {
 	padding-left: 0;
 }
 
-.related-articles li {
+.afbs li {
 	list-style: none;
 }
 
-.related-articles h3 {
+.afbs h3 {
 	font-size: 1.5rem;
 	line-height: 1.3;
 	margin-top: 0;

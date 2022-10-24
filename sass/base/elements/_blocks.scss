@@ -199,6 +199,9 @@
     &__featured-title {
         font-size: 2.5rem;
     }
+    &__excerpt {
+        font-size: 1.25rem;
+    }
 
 }
 .recipe-block {
@@ -259,7 +262,7 @@
         }
     }
 }
-.related-articles {
+.afbs {
     ul {
         padding-left: 0;
     }
