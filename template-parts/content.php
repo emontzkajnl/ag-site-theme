@@ -119,7 +119,7 @@
 	</div>
 
 	<footer class="entry-footer">
-		<?php ag_sites_entry_footer(); ?>
+		<?php // ag_sites_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php else: ?>

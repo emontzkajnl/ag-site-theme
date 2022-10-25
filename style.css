@@ -1336,6 +1336,14 @@ big {
 	text-decoration: underline;
 }
 
+.related-articles ul {
+	padding-left: 0;
+}
+
+.related-articles li {
+	list-style: none;
+}
+
 /* Elements
 --------------------------------------------- */
 body {
@@ -1979,6 +1987,7 @@ table {
 	display: flex;
 	flex-direction: row;
 	border: 1px solid #333;
+	margin-bottom: 80px;
 }
 
 .podcast-player__title {
@@ -1989,13 +1998,37 @@ table {
 	border-left: 1px solid #333;
 }
 
+.podcast-player__img {
+	width: 100px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: -115px;
+}
+
+.podcast-player__textarea {
+	margin-left: 120px;
+	position: relative;
+}
+
+.podcast-player__textarea button {
+	text-transform: uppercase;
+}
+
+.podcast-player__textarea button a {
+	color: white;
+}
+
+.podcast-player__textarea button a:hover, .podcast-player__textarea button a:visited {
+	color: white;
+}
+
 .podcast-player > div {
 	flex-basis: 50%;
 	padding: 15px;
 }
 
 .podcast-player .player {
-	height: 200px;
 	overflow: hidden;
 }
 
