@@ -180,15 +180,31 @@ function ag_sites_customize_css() {
 		font-weight: 400;
     	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Lora-Medium.ttf');
 	}
+
+	@font-face {
+		font-family: Roboto;
+		font-weight: 200;
+    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Thin.ttf');
+	}
+	@font-face {
+		font-family: Roboto;
+		font-weight: 300;
+    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Light.ttf');
+	}
 	@font-face {
 		font-family: Roboto;
 		font-weight: 400;
+    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Regular.ttf');
+	}
+	@font-face {
+		font-family: Roboto;
+		font-weight: 500;
     	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Medium.ttf');
 	}
 	@font-face {
 		font-family: Roboto;
-		font-weight: 100;
-    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Thin.ttf');
+		font-weight: 700;
+    	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Bold.ttf');
 	}
 
 </style>

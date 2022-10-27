@@ -1891,10 +1891,16 @@ table {
 
 .ilfb-afps__featured-title {
 	font-size: 2.5rem;
+	margin: 20px 0 0;
 }
 
 .ilfb-afps__excerpt {
 	font-size: 1.25rem;
+}
+
+.ilfb-afps .cat-text {
+	font-weight: 300;
+	margin-bottom: -20px;
 }
 
 .recipe-block {
@@ -2017,6 +2023,7 @@ table {
 
 .podcast-player__textarea button a {
 	color: white;
+	text-decoration: none;
 }
 
 .podcast-player__textarea button a:hover, .podcast-player__textarea button a:visited {

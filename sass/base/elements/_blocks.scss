@@ -198,10 +198,15 @@
     }
     &__featured-title {
         font-size: 2.5rem;
+        margin: 20px 0 0;
     }
     &__excerpt {
         font-size: 1.25rem;
     }
+    .cat-text {
+        font-weight: 300;
+        margin-bottom: -20px;
+    } 
 
 }
 .recipe-block {
@@ -307,6 +312,7 @@
             text-transform: uppercase;
             a {
                 color: white;
+                text-decoration: none;
                 &:hover, &:visited {
                     color: white;
                 }
