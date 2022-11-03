@@ -13,7 +13,7 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			// float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
@@ -34,7 +34,7 @@
 			}
 
 			a {
-				width: 200px;
+				// width: 200px;
 			}
 		}
 
@@ -147,11 +147,40 @@
 					position: absolute;
 					right: 30px;
 				}
+				&.open-subnav {
+					height: auto;
+					border-bottom: none;
+					&:after {
+						content: '_';
+						position: absolute;
+						right: 30px;
+						top: -10px;
+					}
+					> a {
+						height: 50px;
+						// top: -50px;
+					}
+					ul {
+						position: static;
+						left: auto;
+						padding-top: 50px;
+						li {
+							padding-left: 20px;
+							&:first-child {
+								border-top: 1px solid rgba(0, 0, 0, 0.7);
+							}
+							a {
+								text-indent: 20px;
+							}
+						}
+					}
+				}
 			}
-			> a {
+			a {
 				position: absolute;
 				left: 15px;
 				z-index: 999;
+				width: auto;
 				display: inline-block;
 			}
 		}
