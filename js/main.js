@@ -22,6 +22,36 @@
     searchPopup.classList.remove('search-open');
   });
 
+  if ($('.megahero').length) {
+    // $('.custom-logo').attr('src', whitelogosrc);
+    $('body').addClass('body-mega-hero has-hero');
+  }
+
+  const megaHeroFunction = function(direction) {
+    const body = $('body');
+    if (direction == 'up') {
+      body.addClass('body-mega-hero');
+      // $('.custom-logo').attr('src', whitelogosrc);
+    } else {
+      body.removeClass('body-mega-hero');
+      // $('.custom-logo').attr('src', logosrc);
+    }
+    console.log('direction is ',direction); 
+  }
+
+
+  const megaHero = $(".megahero").waypoint({
+    // handler: megaHeroFunction(direction),
+    handler: function(direction){
+      megaHeroFunction(direction);
+    },
+    offset: function() {
+      return -this.element.clientHeight
+    }
+  });
+
+  console.log('testing again');
+
 
 
 

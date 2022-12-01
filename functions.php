@@ -9,7 +9,7 @@
 
 if ( ! defined( '_ag_site_theme_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_ag_site_theme_VERSION', null );
+	define( '_ag_site_theme_VERSION', '1.1');
 }
 
 /**
@@ -157,7 +157,8 @@ function ag_sites_scripts() {
 	wp_enqueue_style( 'ag-sites-style', get_stylesheet_uri(), array(), _ag_site_theme_VERSION );
 	wp_style_add_data( 'ag-sites-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'headroom', get_template_directory_uri() . '/js/headroom.js', array(), _ag_site_theme_VERSION , true );
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery', 'headroom'), _ag_site_theme_VERSION , true );
+	wp_enqueue_script( 'waypoint', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array(), _ag_site_theme_VERSION , true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery', 'headroom','waypoint'), _ag_site_theme_VERSION , true );
 	wp_enqueue_script( 'ag-sites-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _ag_site_theme_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

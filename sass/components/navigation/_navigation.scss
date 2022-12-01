@@ -105,6 +105,9 @@
 			top: 0;
 			flex-direction: column;
 			justify-content: flex-start;
+			.header-social {
+				display: flex;
+			}
 			.main-navigation {
 				padding-top: 100px;
 				ul {
@@ -184,9 +187,10 @@
 				display: inline-block;
 			}
 		}
-		.header-social {
-			margin: 80px 2em 0;
-		}
+	}
+	.header-social {
+		margin: 80px 2em 0;
+		display: none;
 	}
 }
 
