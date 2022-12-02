@@ -1583,7 +1583,7 @@ body {
 }
 
 .header-social li.facebook a {
-	left: 10px;
+	left: 8px;
 }
 
 .header-social li.youtube a {
@@ -1593,7 +1593,7 @@ body {
 .header-social a {
 	position: absolute;
 	color: white;
-	top: 7px;
+	top: 4px;
 	left: 8px;
 }
 
@@ -1845,7 +1845,7 @@ table {
 }
 
 .custom-article-list h2 {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	line-height: 1.2;
 	margin-top: 5px;
 	margin-bottom: 40px;
@@ -1885,7 +1885,7 @@ table {
 }
 
 .ilfb-article-list__title {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	margin-top: 0;
 }
 
@@ -2213,7 +2213,7 @@ input[type="submit"] {
 	background: #197b30;
 	color: #fff;
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 0.6em 1em 0.6em;
 	font-family: "acumin-pro", sans-serif;
 }
 
@@ -11198,7 +11198,7 @@ readers do not read off random characters that represent icons */
 		font-size: 1rem;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		border-bottom: 1px solid gray;
+		border-bottom: 1px solid #ccc;
 	}
 	.menu-item-has-children > a {
 		position: relative;
