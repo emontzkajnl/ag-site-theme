@@ -1583,7 +1583,7 @@ body {
 }
 
 .header-social li.facebook a {
-	left: 8px;
+	left: 10px;
 }
 
 .header-social li.youtube a {
@@ -1923,7 +1923,7 @@ table {
 	text-align: center;
 }
 
-.ilfb-afps .m-col-9 img {
+.ilfb-afps .l-col-9 img {
 	max-width: none;
 	width: 100%;
 }
@@ -1935,6 +1935,17 @@ table {
 
 .ilfb-afps__excerpt {
 	font-size: 1.25rem;
+}
+
+.ilfb-afps__img-container {
+	width: 100%;
+	height: 225px;
+}
+
+.ilfb-afps__img-container img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .ilfb-afps .cat-text {
@@ -2109,6 +2120,9 @@ table {
 	}
 	.read-the-magazine__text {
 		margin-left: 30px;
+	}
+	.ilfb-afps__side-article:first-child {
+		min-height: 425px;
 	}
 }
 

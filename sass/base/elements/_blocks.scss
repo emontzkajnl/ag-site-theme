@@ -194,7 +194,7 @@
 .ilfb-afps {
     margin-bottom: 50px;
     text-align: center;
-    .m-col-9 {
+    .l-col-9 {
         img {
             max-width: none;
             width: 100%;
@@ -206,6 +206,15 @@
     }
     &__excerpt {
         font-size: 1.25rem;
+    }
+    &__img-container {
+        width: 100%;
+        height: 225px;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
     }
     .cat-text {
         font-weight: 300;
@@ -366,6 +375,11 @@
         }
         &__text {
             margin-left: 30px;
+        }
+    }
+    .ilfb-afps__side-article {
+        &:first-child {
+            min-height: 425px;
         }
     }
 }
