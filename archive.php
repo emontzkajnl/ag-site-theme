@@ -31,6 +31,7 @@ get_header();
 			<?php $q = get_queried_object(  );
 					if (is_category(  )) {
 						echo '<h1 class="page-title">'.$q->cat_name.'</h1>';
+						echo '<p style="font-size: 20px;">'.$q->category_description.'</p>';
 					} else {
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 					} ?>
