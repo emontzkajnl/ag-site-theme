@@ -84,25 +84,38 @@
     margin-right: auto;
     .section-heading {
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         font-size: 1.5rem;
     }
     ul {
         margin: 0;
         padding-left: 0;
-        padding-bottom: 3px;
-        border-bottom: 5px solid #8cc63e;
+        padding-bottom: 15px;
+        border-bottom: 1px solid white;
     }
     li {
         list-style: none;
         display: inline-block;
-        padding-right: 25px;
+        margin-right: 25px;
+        position: relative;
+        height: 35px;
+        width: 35px;
+        background-color: white;
+        border-radius: 50%;
         &:last-child {
-            padding-right: 0;
+            margin-right: 0;
         }
         a {
-            font-size: 2rem;
-            color: $darkgray;
+            font-size: 20px;
+            position: absolute;
+            // color: white;
+            top: 4px;
+            left: 8px;
+            // background-color: green;
+            // padding: 30px;
+            &:visited, &:focus, &:active, &:hover {
+                // color: white;
+            }
         }
     }
 }

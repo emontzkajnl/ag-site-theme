@@ -158,7 +158,7 @@ function ag_sites_customize_css() {
 		color: <?php echo $secondary_color; ?>;
 	}
 	.background__primary {
-		background-color: <?php echo $primary_color; ?>;
+		background-color: <?php echo $primary_color; ?> !important;
 	}
 	.background__secondary {
 		background-color: <?php echo $secondary_color; ?>;
