@@ -11237,14 +11237,6 @@ readers do not read off random characters that represent icons */
 	.menu-item-has-children > a {
 		position: relative;
 	}
-	.menu-item-has-children > a::after {
-		content: "^";
-		position: absolute;
-		right: 30px;
-		top: 5px;
-		font-size: 12px;
-		transform: rotate(0.5turn);
-	}
 }
 
 .site-main .comment-navigation, .site-main
@@ -11303,7 +11295,7 @@ readers do not read off random characters that represent icons */
 }
 
 .post-excerpt {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-family: "acumin-pro", sans-serif;
 	margin-bottom: .5em;
 }
@@ -11441,7 +11433,7 @@ figcaption {
 }
 
 .wp-caption-text {
-	text-align: center;
+	text-align: left;
 }
 
 /* Galleries

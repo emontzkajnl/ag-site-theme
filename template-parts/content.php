@@ -98,7 +98,7 @@
 						</div>
 					</a>
 						<?php $yoast_primary_key = get_post_meta( get_the_ID( ), '_yoast_wpseo_primary_category', TRUE );  
-						if ($yoast_primary_key) { echo '<p class="cat-text"><a href="'.get_category_link( $yoast_primary_key ).'">'.get_cat_name($yoast_primary_key).'</a></p>'; } ?>
+						// if ($yoast_primary_key) { echo '<p class="cat-text"><a href="'.get_category_link( $yoast_primary_key ).'">'.get_cat_name($yoast_primary_key).'</a></p>'; } ?>
 						<h3><a class="title-link" href="<?php echo get_the_permalink(  ); ?>"><?php echo get_the_title(); ?></a></h3>
 				</li>
 				<?php endwhile;
@@ -131,7 +131,7 @@
 	</div></a>
 	
 	<?php 
-	echo '<p class="cat-text"><a href="'.esc_url(get_category_link($cat[0]->term_id)).'">'.$cat[0]->name.'</a></p>';
+	// echo '<p class="cat-text"><a href="'.esc_url(get_category_link($cat[0]->term_id)).'">'.$cat[0]->name.'</a></p>';
 	echo '<h2><a class="title-link" href="'.esc_url( get_permalink() ).'">'.get_the_title().'</a></h2>';?>
 	
 </div>

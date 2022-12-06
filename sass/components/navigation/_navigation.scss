@@ -276,14 +276,14 @@
 		> a {
 			position: relative;
 			&::after {
-				content: "^";
-				position: absolute;
-				// font-family: 'Font Awesome 5 Free';
-				// opacity: 1;
-				right: 30px;
-				top: 5px;
-				font-size: 12px;
-				transform: rotate(0.5turn);
+				// content: "^";
+				// position: absolute;
+				// // font-family: 'Font Awesome 5 Free';
+				// // opacity: 1;
+				// right: 30px;
+				// top: 5px;
+				// font-size: 12px;
+				// transform: rotate(0.5turn);
 			}
 		}
 
