@@ -101,9 +101,10 @@ figcaption {
 }
 .addtoany_list {
 	margin-top: 20px;
+	justify-content: end;
 	a {
 		> span {
-			background-color: gray !important;
+			// background-color: gray !important;
 			border-radius: 50% !important;
 		}
 	}

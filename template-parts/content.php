@@ -40,12 +40,13 @@
 
 				the_title( '<h1 class="entry-title">', '</h1>' );
 				ag_sites_posted_by();
-				echo ' | ';
-				ag_sites_posted_on();
+				// echo ' | ';
+				// ag_sites_posted_on();
 				if (function_exists( 'ADDTOANY_SHARE_SAVE_KIT' )) {
 					echo do_shortcode('[addtoany url="' . esc_url(get_the_permalink(get_the_ID())).'" ]');
 				}
-				echo '<p class="post-excerpt">'.get_the_excerpt( ).'</p>'; ?>
+				echo '<p class="post-excerpt">'.get_the_excerpt( ).'</p>';
+				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -87,7 +88,7 @@
 			$rel_articles = new WP_Query($rel_args);
 			if ($rel_articles->have_posts( )): ?>
 			<div class="related-articles">
-				<h3 class="section-heading">You Might Also Like</h3>
+				<h2 class="section-heading font__serif" style="text-align: center;">You Might Also Like</h2>
 				
 				<ul class="row">
 				<?php while ($rel_articles->have_posts()): $rel_articles->the_post(); ?>

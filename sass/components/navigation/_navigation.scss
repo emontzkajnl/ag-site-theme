@@ -229,6 +229,15 @@
 			align-items: center;
 			height: 100%;
 			> li {
+				margin-right: 15px;
+				&:last-child {
+					margin-right: 0;
+				}
+				&.menu-item-has-children {
+					a {
+						padding-right: 20px;
+					}
+				}
 				&.menu-item-home {
 					display: none;
 				}

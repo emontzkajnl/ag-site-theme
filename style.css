@@ -1438,7 +1438,7 @@ body {
 
 .megahero_img {
 	width: 100%;
-	height: 100vh;
+	height: 800px;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -11198,6 +11198,15 @@ readers do not read off random characters that represent icons */
 		align-items: center;
 		height: 100%;
 	}
+	.main-navigation ul > li {
+		margin-right: 15px;
+	}
+	.main-navigation ul > li:last-child {
+		margin-right: 0;
+	}
+	.main-navigation ul > li.menu-item-has-children a {
+		padding-right: 20px;
+	}
 	.main-navigation ul > li.menu-item-home {
 		display: none;
 	}
@@ -11345,10 +11354,10 @@ figcaption {
 
 .addtoany_list {
 	margin-top: 20px;
+	justify-content: end;
 }
 
 .addtoany_list a > span {
-	background-color: gray !important;
 	border-radius: 50% !important;
 }
 
