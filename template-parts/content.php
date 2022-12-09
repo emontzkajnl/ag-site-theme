@@ -88,7 +88,7 @@
 			$rel_articles = new WP_Query($rel_args);
 			if ($rel_articles->have_posts( )): ?>
 			<div class="related-articles">
-				<h2 class="section-heading font__serif" style="text-align: center;">You Might Also Like</h2>
+				<h2 class="comment-reply-title font__serif" style="text-align: center;">You Might Also Like</h2>
 				
 				<ul class="row">
 				<?php while ($rel_articles->have_posts()): $rel_articles->the_post(); ?>
