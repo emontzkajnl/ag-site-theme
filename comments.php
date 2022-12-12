@@ -53,6 +53,7 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
+	
 
 	 comment_form();
 	?>
