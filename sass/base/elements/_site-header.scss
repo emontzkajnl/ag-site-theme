@@ -81,17 +81,22 @@
   }
 }
 .megahero {
+  height: 800px;
+  overflow: hidden;
   &_img {
     width: 100%;
-    height: 100vh ;
+    height: 800px ;
     background-repeat: no-repeat;
     background-size: cover;
     // background-position: center center;
   }
+  video {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    height: 800px;
+
+
+  }
 }
-.megahero_img {
-  width: 100%;
-  height: 800px ;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
