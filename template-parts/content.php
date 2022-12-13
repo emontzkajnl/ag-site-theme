@@ -46,9 +46,9 @@
 					echo do_shortcode('[addtoany url="' . esc_url(get_the_permalink(get_the_ID())).'" ]');
 				}
 				if (get_field('subheading')) {echo '<p class="post-excerpt">'.get_field('subheading').'</p>';}
-				if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-				  }
+				// if ( function_exists('yoast_breadcrumb') ) {
+				// 	yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				//   }
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>

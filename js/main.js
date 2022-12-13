@@ -27,14 +27,19 @@
     $('body').addClass('body-mega-hero has-hero');
   }
 
+  const siteLogo = $('.site-logo').attr('src');
+  const whiteSiteLogo = siteLogo.replace('green', 'white');
+  if ($(".megahero").length) {
+    $('.site-logo').attr('src', whiteSiteLogo);
+
   const megaHeroFunction = function(direction) {
     const body = $('body');
     if (direction == 'up') {
       body.addClass('body-mega-hero');
-      // $('.custom-logo').attr('src', whitelogosrc);
+      $('.site-logo').attr('src', whiteSiteLogo);
     } else {
       body.removeClass('body-mega-hero');
-      // $('.custom-logo').attr('src', logosrc);
+      $('.site-logo').attr('src', siteLogo);
     }
     console.log('direction is ',direction); 
   }
@@ -49,8 +54,6 @@
       return -this.element.clientHeight
     }
   });
-
-  console.log('testing again');
 
 
 
