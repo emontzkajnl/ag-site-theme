@@ -22,15 +22,14 @@
     searchPopup.classList.remove('search-open');
   });
 
-  if ($('.megahero').length) {
-    // $('.custom-logo').attr('src', whitelogosrc);
-    $('body').addClass('body-mega-hero has-hero');
-  }
+ 
 
   const siteLogo = $('.site-logo').attr('src');
   const whiteSiteLogo = siteLogo.replace('green', 'white');
   if ($(".megahero").length) {
     $('.site-logo').attr('src', whiteSiteLogo);
+    $('body').addClass('body-mega-hero has-hero');
+  }
 
   const megaHeroFunction = function(direction) {
     const body = $('body');
