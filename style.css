@@ -2147,7 +2147,17 @@ table {
 		margin-left: 30px;
 	}
 	.ilfb-afps__side-article:first-child {
-		min-height: 425px;
+		min-height: 365px;
+	}
+	.ilfb-afps .l-col-9 > a {
+		display: block;
+		height: 590px;
+		width: 100%;
+	}
+	.ilfb-afps .l-col-9 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
@@ -11237,6 +11247,7 @@ readers do not read off random characters that represent icons */
 	}
 	.main-navigation ul ul li {
 		background: white;
+		margin-right: 0;
 	}
 	.main-navigation ul ul li:last-child a {
 		border-bottom: none;

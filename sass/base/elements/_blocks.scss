@@ -404,7 +404,21 @@
     }
     .ilfb-afps__side-article {
         &:first-child {
-            min-height: 425px;
+            min-height: 365px;
+        }
+    }
+    .ilfb-afps {
+        .l-col-9 {
+            > a {
+                display: block;
+                height: 590px;
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
