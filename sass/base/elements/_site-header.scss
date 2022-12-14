@@ -44,7 +44,7 @@
 }
 .site-logo {
   width: 435px;
-  margin-top: 15px;
+  margin-top: 0;
   margin-right: 20px;
 }
 .nav-menu {
@@ -61,6 +61,7 @@
 
   .site-header {
     background-color: transparent;
+    box-shadow: unset !important;
   }
   .search-btn {
     background: transparent;

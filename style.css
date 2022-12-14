@@ -1401,7 +1401,7 @@ body {
 
 .site-logo {
 	width: 435px;
-	margin-top: 15px;
+	margin-top: 0;
 	margin-right: 20px;
 }
 
@@ -1415,6 +1415,7 @@ body {
 
 .body-mega-hero .site-header {
 	background-color: transparent;
+	box-shadow: unset !important;
 }
 
 .body-mega-hero .search-btn {
@@ -1918,9 +1919,24 @@ table {
 	flex-shrink: 1;
 }
 
-.ilfb-article-list.two div[class$="__image"] img {
+.ilfb-article-list.two div[class$="__image"] > a {
+	display: block;
 	width: 100%;
-	height: auto;
+	height: 157px;
+}
+
+.ilfb-article-list.two div[class$="__image"] img {
+	object-fit: cover;
+}
+
+.ilfb-article-list.three div[class$="__image"] > a {
+	display: block;
+	width: 100%;
+	height: 200px;
+}
+
+.ilfb-article-list.three div[class$="__image"] img {
+	object-fit: cover;
 }
 
 .ilfb-article-list button {
