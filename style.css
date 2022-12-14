@@ -1927,6 +1927,7 @@ table {
 
 .ilfb-article-list.two div[class$="__image"] img {
 	object-fit: cover;
+	max-height: 100%;
 }
 
 .ilfb-article-list.three div[class$="__image"] > a {
@@ -1937,6 +1938,7 @@ table {
 
 .ilfb-article-list.three div[class$="__image"] img {
 	object-fit: cover;
+	max-height: 100%;
 }
 
 .ilfb-article-list button {
