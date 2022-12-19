@@ -31,3 +31,8 @@ a.unstyle-link {
 .float-left {
     float: left;
 }
+@media all and (max-width: 520px) {
+    .align-right, .alignright, .align-left, .alignleft {
+        float: none !important;
+    }
+}

@@ -1868,6 +1868,10 @@ table {
 	width: 100%;
 }
 
+.video-section {
+	margin-bottom: 50px;
+}
+
 .video-section__sidebar-item {
 	display: flex;
 	margin-bottom: 15px;
@@ -1878,16 +1882,18 @@ table {
 }
 
 .video-section__sb-img-container {
-	height: 150px;
-	flex-basis: 50%;
+	height: 115px;
+	flex-basis: 40%;
 	flex-shrink: 0;
 	margin-right: 15px;
+	overflow-y: hidden;
+	position: relative;
 }
 
 .video-section__sb-img-container a {
-	display: block;
 	width: 100%;
-	height: 150px;
+	max-height: 100%;
+	position: relative;
 }
 
 .video-section__sb-img-container img {
@@ -1896,9 +1902,79 @@ table {
 	object-fit: cover;
 }
 
-.video-section__sb-img-container h4 {
-	flex-basis: 50%;
+.video-section__sb-img-container .play-btn {
+	position: absolute;
+	z-index: 5;
+	right: 15px;
+	bottom: 15px;
+	padding: 15px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.video-section__sb-img-container .play-btn i {
+	font-size: 20px;
+	position: absolute;
+	left: 10px;
+	top: 6px;
+}
+
+.video-section__text-container {
+	flex-basis: 60%;
 	flex-shrink: 0;
+}
+
+.video-section__text-container .cat-text {
+	margin-top: 0;
+}
+
+.video-section__text-container h4 {
+	margin-top: 0;
+	margin-bottom: 1px;
+}
+
+.video-section__img-container {
+	position: relative;
+}
+
+.video-section__img-container a {
+	width: 100%;
+	max-height: 100%;
+	position: relative;
+}
+
+.video-section__img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.video-section__img-container .play-btn {
+	position: absolute;
+	z-index: 5;
+	right: 15px;
+	bottom: 15px;
+	padding: 25px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.video-section__img-container .play-btn i {
+	font-size: 32px;
+	position: absolute;
+	left: 17px;
+	top: 9px;
+}
+
+.video-section h3 {
+	margin-top: 0;
+}
+
+.video-section button {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	cursor: default;
 }
 
 .cat-text {
@@ -2103,7 +2179,7 @@ table {
 
 .podcast-player {
 	min-height: 250px;
-	display: flex;
+	display: block;
 	flex-direction: row;
 	border: 1px solid #acacac;
 	margin-bottom: 80px;
@@ -2210,6 +2286,9 @@ table {
 		height: 100%;
 		object-fit: cover;
 	}
+	.podcast-player {
+		display: flex;
+	}
 }
 
 div[class$="-leaderboard"], div[class$="-in-content"], div[class$="-right-rail"] {
@@ -2263,6 +2342,12 @@ a.unstyle-link:hover, a.unstyle-link:visited, a.unstyle-link:active {
 
 .float-left {
 	float: left;
+}
+
+@media all and (max-width: 520px) {
+	.align-right, .alignright, .align-left, .alignleft {
+		float: none !important;
+	}
 }
 
 /* Links
@@ -11473,6 +11558,12 @@ figcaption {
 
 .widget select {
 	max-width: 100%;
+}
+
+@media all and (max-width: 768px) {
+	.widget {
+		text-align: center;
+	}
 }
 
 /* Media
