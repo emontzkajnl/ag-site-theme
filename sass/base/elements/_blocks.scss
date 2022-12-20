@@ -196,6 +196,7 @@
         h4 {
             margin-top: 0;
             margin-bottom: 1px;
+            font-weight: 400;
         }
     }
     &__img-container {
@@ -221,13 +222,14 @@
             i {
                 font-size: 27px;
                 position: absolute;
-                left: 16px;
-                top: 911px;
+                left: 17px;
+                top: 11px;
             }
         }
     }
     h3 {
         margin-top: 0;
+        font-weight: 400;
     }
     button {
         font-size: 1.5rem;
@@ -264,6 +266,7 @@
     &__title {
         font-size: 1.2rem;
         margin-top: 0;
+        font-weight: 400;
     }
     &.two {
         .col-12 {

@@ -22,7 +22,8 @@ get_header();
 					?>
 				</h1>
 			</header><!-- .page-header -->
-
+			<div class="wp-block-columns ag-site-sidebar-layout">
+				<div class="wp-block-column">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -45,9 +46,13 @@ get_header();
 
 		endif;
 		?>
-
+			</div>
+				<div class="wp-block-column">
+				<?php get_sidebar(); ?>
+				</div>
+			</div>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

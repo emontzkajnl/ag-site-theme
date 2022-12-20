@@ -40,7 +40,7 @@
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  width: 300px;
+  width: 250px;
 }
 .site-logo {
   width: 435px;
@@ -101,3 +101,8 @@
   }
 }
 
+@media all and (min-width: 550px) {
+  .site-branding {
+      width: 300px;
+  }
+} 

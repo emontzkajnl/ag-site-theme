@@ -16,18 +16,17 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			ag_sites_posted_on();
-			ag_sites_posted_by();
+			// ag_sites_posted_on();
+			// ag_sites_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php ag_sites_post_thumbnail(); ?>
-
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<?php //ag_sites_post_thumbnail('small-thumb');
+	echo '<a href="'.get_the_permalink().'">'.get_the_post_thumbnail( get_the_ID(), 'small-thumb' ).'</a>'; ?>
 
 	<!-- <footer class="entry-footer"> -->
 		<?php //ag_sites_entry_footer(); ?>
