@@ -30,10 +30,12 @@ get_header();
 			<!-- <div class="col-12 m-col-9"> -->
 			<?php $q = get_queried_object(  );
 					if (is_category(  )) {
-						echo '<h1 class="page-title">'.$q->cat_name.'</h1>';
+						echo '<h1 class="page-title color__primary">'.$q->cat_name.'</h1>';
 						echo '<p style="font-size: 20px;">'.$q->category_description.'</p>';
+					} elseif (is_author()){
+						echo '<h1 class="page-title color__primary">Posts by '.get_the_author().'</h1>';
 					} else {
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_title( '<h1 class="page-title color__primary">', '</h1>' );
 					} ?>
 				<div class="row">
 

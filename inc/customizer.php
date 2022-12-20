@@ -167,10 +167,6 @@ function ag_sites_customize_css() {
 	.site-footer {
 		background-color: <?php echo $footer_background; ?>;
 	}
-	.font__sans-serif, .cat-text {
-		font-family: <?php echo  get_theme_mod('sans_serif_font'); ?>;
-		font-weight: 400;
-	}
 	.font__serif {
 		font-family: <?php echo  get_theme_mod('serif_font'); ?>;
 		font-weight: 400;
@@ -205,6 +201,25 @@ function ag_sites_customize_css() {
 		font-family: Roboto;
 		font-weight: 700;
     	src: url('<?php echo get_template_directory_uri( ); ?>/assets/fonts/Roboto-Bold.ttf');
+	}
+
+	.read-the-magazine__text,
+	.read-the-magazine__title,
+	.recipe-block-text,
+	.article-callout__category,
+	.article-callout__title,
+	.cat-text,
+	.font__sans-serif,
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] ,
+	figcaption ,
+	.post-excerpt,
+	/* .page-title */
+	{
+		font-family: <?php echo  get_theme_mod('sans_serif_font'); ?>;
+		font-weight: 400;
 	}
 
 </style>
