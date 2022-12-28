@@ -1420,7 +1420,7 @@ body {
 	background: transparent;
 }
 
-.body-mega-hero .main-navigation ul > li a {
+.body-mega-hero .nav-container:not(.toggled) .main-navigation ul > li a {
 	color: white;
 }
 
