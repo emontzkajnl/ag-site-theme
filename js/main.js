@@ -26,7 +26,8 @@
 
   const siteLogo = $('.site-logo').attr('src');
   const whiteSiteLogo = siteLogo.replace('green', 'white');
-  if ($(".megahero").length) {
+  
+  if ($(".megahero").length && !$(".megahero").hasClass('below-header')) {
     $('.site-logo').attr('src', whiteSiteLogo);
     $('body').addClass('body-mega-hero has-hero');
   }
@@ -40,11 +41,10 @@
       body.removeClass('body-mega-hero');
       $('.site-logo').attr('src', siteLogo);
     }
-    console.log('direction is ',direction); 
   }
 
 
-  const megaHero = $(".megahero").waypoint({
+  const megaHero = $(".megahero:not(.below-header)").waypoint({
     // handler: megaHeroFunction(direction),
     handler: function(direction){
       megaHeroFunction(direction);

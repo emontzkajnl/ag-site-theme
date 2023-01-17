@@ -1,7 +1,9 @@
 <?php 
     $umov = get_field('use_megahero_or_video' );
 	if ($umov && $umov !== 'none'):
-        echo '<div class="megahero">';
+      $below_header = get_field('megahero_below_header');
+      $bh_class = $below_header ? 'below-header': '';
+        echo '<div class="megahero '.$bh_class.'">';
         if ($umov === 'image'): 
         $img = get_field('megahero_image'); ?>
         <div class="megahero_img" style="background-image: url(<?php echo $img['url']; ?>); ">
