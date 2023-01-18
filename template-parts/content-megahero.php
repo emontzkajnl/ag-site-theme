@@ -12,7 +12,7 @@
         $vid = get_field('megahero_video');
         // print_r($vid);
         ?>
-        <video autoplay loop muted style="object-fit: cover;">
+        <video autoplay loop muted >
             <source src="<?php echo $vid['url']; ?>" type="video/mp4">
         </video>
         <?php else: // is youtube 
