@@ -1429,14 +1429,14 @@ body {
 }
 
 .megahero {
-	height: 800px;
+	height: auto;
 	overflow: hidden;
 	position: relative;
 }
 
 .megahero_img {
 	width: 100%;
-	height: 800px;
+	height: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
