@@ -94,6 +94,20 @@
 	.search-form {
 		display: none;
 	}
+	.header-social {
+		li {
+			&.facebook {
+				a {
+					left: 11px;
+				}
+			}
+			&.pinterest {
+				a {
+					left: 10px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1059px) {
@@ -131,8 +145,8 @@
 			}
 			.hamburger {
 				position: absolute;
-					top: 60px;
-					right: 20px;
+				top: 60px;
+				right: 20px;
 			}
 			.search-btn {
 				display: none;

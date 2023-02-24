@@ -30,6 +30,16 @@
         font-size: 30px;
         list-style: none;
         margin-right: 10px;
+        &.pinterest {
+            a {
+                left: 8px;
+            }
+        }
+        &.youtube {
+            a {
+                left: 6px;
+            }
+        }
     }
 
 }

@@ -1595,6 +1595,14 @@ body {
 	margin-right: 10px;
 }
 
+.footer-social li.pinterest a {
+	left: 8px;
+}
+
+.footer-social li.youtube a {
+	left: 6px;
+}
+
 .header-social {
 	padding-left: 0;
 	margin: 0 1em 0 0;
@@ -11244,6 +11252,14 @@ readers do not read off random characters that represent icons */
 
 .nav-container .search-form {
 	display: none;
+}
+
+.nav-container .header-social li.facebook a {
+	left: 11px;
+}
+
+.nav-container .header-social li.pinterest a {
+	left: 10px;
 }
 
 @media screen and (max-width: 1059px) {
