@@ -72,9 +72,10 @@
 .hamburger {
 	cursor: pointer;
 	display: block;
-	position: absolute;
-	top: 60px;
-	right: 20px;
+	position: relative;
+	// position: absolute;
+	// top: 60px;
+	// right: 20px;
 }
 .bar {
 	display: block;
@@ -127,6 +128,11 @@
 				&:nth-child(3) {
 					transform: translateY(-8px) rotate(-45deg);
 				}
+			}
+			.hamburger {
+				position: absolute;
+					top: 60px;
+					right: 20px;
 			}
 			.search-btn {
 				display: none;

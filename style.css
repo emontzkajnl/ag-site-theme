@@ -1443,7 +1443,6 @@ body {
 	height: auto;
 	overflow: hidden;
 	position: relative;
-	max-height: 675px !important;
 }
 
 .megahero_img {
@@ -11226,9 +11225,7 @@ readers do not read off random characters that represent icons */
 .hamburger {
 	cursor: pointer;
 	display: block;
-	position: absolute;
-	top: 60px;
-	right: 20px;
+	position: relative;
 }
 
 .bar {
@@ -11279,6 +11276,11 @@ readers do not read off random characters that represent icons */
 	}
 	.nav-container.toggled .bar:nth-child(3) {
 		transform: translateY(-8px) rotate(-45deg);
+	}
+	.nav-container.toggled .hamburger {
+		position: absolute;
+		top: 60px;
+		right: 20px;
 	}
 	.nav-container.toggled .search-btn {
 		display: none;

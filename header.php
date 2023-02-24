@@ -48,11 +48,11 @@
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ag-sites' ); ?></button>
-			<!-- <div class="hamburger">
+			<div class="hamburger">
 				<span class="bar"></span>
 				<span class="bar"></span>
 				<span class="bar"></span>
-			</div> -->
+			</div>
 			<?php
 			wp_nav_menu(
 				array(
@@ -65,11 +65,7 @@
 
 		<?php //get_search_form(); ?>
 		<?php get_template_part( 'searchform' ); ?>
-		<div class="hamburger">
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</div>
+		
 		
 
 	</header><!-- #masthead -->
