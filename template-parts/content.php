@@ -40,8 +40,8 @@
 
 				the_title( '<h1 class="entry-title">', '</h1>' );
 				ag_sites_posted_by();
-				// echo ' | ';
-				// ag_sites_posted_on();
+				 echo ' | ';
+				ag_sites_posted_on();
 				if (function_exists( 'ADDTOANY_SHARE_SAVE_KIT' )) {
 					echo do_shortcode('[addtoany url="' . esc_url(get_the_permalink(get_the_ID())).'" ]');
 				}
