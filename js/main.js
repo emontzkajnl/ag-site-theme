@@ -24,11 +24,11 @@
 
  
 
-  const siteLogo = $('.site-logo').attr('src');
-  const whiteSiteLogo = siteLogo.replace('green', 'white');
+  // const siteLogo = $('.site-logo').attr('src');
+  // const whiteSiteLogo = siteLogo.replace('green', 'white');
   
   if ($(".megahero").length && !$(".megahero").hasClass('below-header')) {
-    $('.site-logo').attr('src', whiteSiteLogo);
+    // $('.site-logo').attr('src', whiteSiteLogo);
     $('body').addClass('body-mega-hero has-hero');
   }
 
@@ -36,10 +36,10 @@
     const body = $('body');
     if (direction == 'up') {
       body.addClass('body-mega-hero');
-      $('.site-logo').attr('src', whiteSiteLogo);
+      // $('.site-logo').attr('src', whiteSiteLogo);
     } else {
       body.removeClass('body-mega-hero');
-      $('.site-logo').attr('src', siteLogo);
+      // $('.site-logo').attr('src', siteLogo);
     }
   }
 

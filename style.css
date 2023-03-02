@@ -1407,38 +1407,6 @@ body {
 	margin-top: 15px;
 }
 
-.has-hero .site-main {
-	padding-top: 0;
-}
-
-.body-mega-hero .site-header {
-	background-color: transparent;
-	box-shadow: unset !important;
-}
-
-.body-mega-hero .search-btn {
-	background: transparent;
-	color: white;
-}
-
-.body-mega-hero .nav-container:not(.toggled) .bar {
-	background-color: white;
-}
-
-.body-mega-hero .nav-container:not(.toggled) .hamburger {
-	position: relative;
-	top: 0;
-	right: 0;
-}
-
-.body-mega-hero .nav-container:not(.toggled) .main-navigation ul > li a {
-	color: white;
-}
-
-.body-mega-hero .main-navigation ul ul li {
-	background: transparent;
-}
-
 .megahero {
 	height: auto;
 	overflow: hidden;
@@ -1470,6 +1438,40 @@ body {
 @media all and (min-width: 550px) {
 	.site-branding {
 		width: 300px;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.has-hero .site-main {
+		padding-top: 0;
+	}
+	.body-mega-hero .site-logo.green {
+		display: none;
+	}
+	.body-mega-hero .site-logo.white {
+		display: block !important;
+	}
+	.body-mega-hero .site-header {
+		background-color: transparent;
+		box-shadow: unset !important;
+	}
+	.body-mega-hero .search-btn {
+		background: transparent;
+		color: white;
+	}
+	.body-mega-hero .nav-container:not(.toggled) .bar {
+		background-color: white;
+	}
+	.body-mega-hero .nav-container:not(.toggled) .hamburger {
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+	.body-mega-hero .nav-container:not(.toggled) .main-navigation ul > li a {
+		color: white;
+	}
+	.body-mega-hero .main-navigation ul ul li {
+		background: transparent;
 	}
 }
 

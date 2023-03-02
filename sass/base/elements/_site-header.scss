@@ -52,50 +52,50 @@
 }
 
 // mega hero
-.has-hero {
-  .site-main {
-    padding-top: 0;
-  }
-}
-.body-mega-hero {
+// .has-hero {
+//   .site-main {
+//     padding-top: 0;
+//   }
+// }
+// .body-mega-hero {
 
-  .site-header {
-    background-color: transparent;
-    box-shadow: unset !important;
-  }
-  .search-btn {
-    background: transparent;
-    color: white;
-  }
-  .nav-container:not(.toggled) {
-    .bar {
-      background-color: white;
-    }
-    .hamburger {
-      position: relative;
-      top: 0;
-      right: 0;
-    }
-    .main-navigation ul >li a {
-      color: white;
-    }
-  }
+//   .site-header {
+//     background-color: transparent;
+//     box-shadow: unset !important;
+//   }
+//   .search-btn {
+//     background: transparent;
+//     color: white;
+//   }
+//   .nav-container:not(.toggled) {
+//     .bar {
+//       background-color: white;
+//     }
+//     .hamburger {
+//       position: relative;
+//       top: 0;
+//       right: 0;
+//     }
+//     .main-navigation ul >li a {
+//       color: white;
+//     }
+//   }
 
-  .main-navigation {
-    ul {
-      > li {
-        a {
-          // color: white;
-        }
-      }
-      ul {
-        li {
-          background: transparent;
-        }
-      }
-    }
-  }
-}
+//   .main-navigation {
+//     ul {
+//       > li {
+//         a {
+//           // color: white;
+//         }
+//       }
+//       ul {
+//         li {
+//           background: transparent;
+//         }
+//       }
+//     }
+//   }
+// }
 .megahero {
   height: auto;
   overflow: hidden;
@@ -133,3 +133,52 @@
       width: 300px;
   }
 } 
+
+@media all and (min-width: 768px) {
+  .has-hero {
+    .site-main {
+      padding-top: 0;
+    }
+  }
+  .body-mega-hero {
+    .site-logo {
+      &.green {
+        display: none;
+      }
+      &.white {
+        display: block !important;
+      }
+    }
+    .site-header {
+      background-color: transparent;
+      box-shadow: unset !important;
+    }
+    .search-btn {
+      background: transparent;
+      color: white;
+    }
+    .nav-container:not(.toggled) {
+      .bar {
+        background-color: white;
+      }
+      .hamburger {
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+      .main-navigation ul >li a {
+        color: white;
+      }
+    }
+  
+    .main-navigation {
+      ul {
+        ul {
+          li {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}
