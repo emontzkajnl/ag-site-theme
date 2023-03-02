@@ -50,53 +50,8 @@
 .nav-menu {
   margin-top: 15px;
 }
-
-// mega hero
-// .has-hero {
-//   .site-main {
-//     padding-top: 0;
-//   }
-// }
-// .body-mega-hero {
-
-//   .site-header {
-//     background-color: transparent;
-//     box-shadow: unset !important;
-//   }
-//   .search-btn {
-//     background: transparent;
-//     color: white;
-//   }
-//   .nav-container:not(.toggled) {
-//     .bar {
-//       background-color: white;
-//     }
-//     .hamburger {
-//       position: relative;
-//       top: 0;
-//       right: 0;
-//     }
-//     .main-navigation ul >li a {
-//       color: white;
-//     }
-//   }
-
-//   .main-navigation {
-//     ul {
-//       > li {
-//         a {
-//           // color: white;
-//         }
-//       }
-//       ul {
-//         li {
-//           background: transparent;
-//         }
-//       }
-//     }
-//   }
-// }
 .megahero {
+  display: none;
   height: auto;
   overflow: hidden;
   position: relative;
@@ -135,6 +90,9 @@
 } 
 
 @media all and (min-width: 768px) {
+  .megahero {
+    display: block;
+  }
   .has-hero {
     .site-main {
       padding-top: 0;

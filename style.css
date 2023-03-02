@@ -1408,6 +1408,7 @@ body {
 }
 
 .megahero {
+	display: none;
 	height: auto;
 	overflow: hidden;
 	position: relative;
@@ -1442,6 +1443,9 @@ body {
 }
 
 @media all and (min-width: 768px) {
+	.megahero {
+		display: block;
+	}
 	.has-hero .site-main {
 		padding-top: 0;
 	}
