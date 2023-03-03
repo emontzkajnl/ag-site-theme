@@ -50,7 +50,7 @@
       megaHeroFunction(direction);
     },
     offset: function() {
-      return -this.element.clientHeight
+      return -this.element.clientHeight+100;
     }
   });
 
