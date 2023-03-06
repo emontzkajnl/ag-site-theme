@@ -2231,6 +2231,9 @@ table {
 .podcast-player__left {
 	flex-basis: 50%;
 	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .podcast-player__right {
