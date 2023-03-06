@@ -2105,8 +2105,9 @@ table {
 }
 
 .ilfb-afps__featured-title {
-	font-size: 2.5rem;
-	margin: 20px 0 0;
+	font-size: 2rem;
+	line-height: 1;
+	margin: 20px 0;
 }
 
 .ilfb-afps__excerpt {
@@ -2309,6 +2310,10 @@ table {
 	}
 	.ilfb-afps__side-article:first-child {
 		min-height: 365px;
+	}
+	.ilfb-afps__featured-title {
+		font-size: 2.5rem;
+		line-height: 1.2;
 	}
 	.ilfb-afps .l-col-9 > a {
 		display: block;
