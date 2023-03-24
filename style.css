@@ -2210,70 +2210,83 @@ table {
 }
 
 .podcast-player {
-	min-height: 250px;
 	display: block;
-	flex-direction: row;
 	border: 1px solid #acacac;
 	margin-bottom: 80px;
 }
 
 .podcast-player__title {
-	font-size: 1.8rem;
+	font-size: 4vw;
 	line-height: 1;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	margin-bottom: 10px;
+	flex-basis: 65%;
+}
+
+.podcast-player__title span {
+	font-family: Roboto, Arial, sans-serif !important;
+	font-size: 7vw;
+	text-transform: uppercase;
+}
+
+.podcast-player__icon-list {
+	flex-basis: 35%;
+	padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: end;
+	margin-bottom: 0;
+	margin-left: 2%;
+}
+
+.podcast-player__icon-list li {
+	width: 30%;
+	list-style-type: none;
+	margin-left: 2%;
 }
 
 .podcast-player__description {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin-bottom: 20px;
+	margin-top: 10px;
+	color: white;
+	font-style: italic;
+	text-align: center;
 }
 
-.podcast-player__left {
-	flex-basis: 50%;
+.podcast-player__top {
 	padding: 15px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	background-color: #337a5c;
 }
 
 .podcast-player__right {
-	flex-basis: 50%;
 	border-left: 1px solid #acacac;
 	padding: 0;
 }
 
-.podcast-player__img {
-	width: 100px;
-	height: auto;
-	position: absolute;
-	top: 0;
-	left: -115px;
-}
-
 .podcast-player__textarea {
-	margin-left: 120px;
 	position: relative;
-}
-
-.podcast-player__textarea button {
-	text-transform: uppercase;
-	padding: 1em;
-}
-
-.podcast-player__textarea button a {
 	color: white;
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 1.125rem;
-}
-
-.podcast-player__textarea button a:hover, .podcast-player__textarea button a:visited {
-	color: white;
+	display: flex;
+	flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .podcast-player .player {
 	overflow: hidden;
+}
+
+@media all and (min-width: 768px) {
+	.podcast-player__title {
+		font-size: 2.4vw;
+	}
+	.podcast-player__title span {
+		font-size: 4.8vw;
+	}
+	.podcast-player__description {
+		font-size: 1.5rem;
+	}
 }
 
 @media all and (min-width: 48em) {
@@ -2325,8 +2338,14 @@ table {
 		height: 100%;
 		object-fit: cover;
 	}
-	.podcast-player {
-		display: flex;
+}
+
+@media all and (min-width: 1366px) {
+	.podcast-player__title {
+		font-size: 2.2rem;
+	}
+	.podcast-player__title span {
+		font-size: 4.5rem;
 	}
 }
 

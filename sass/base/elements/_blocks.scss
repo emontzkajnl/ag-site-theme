@@ -417,65 +417,79 @@
     border: 40px solid $lightgreen;
 }
 .podcast-player {
-    min-height: 250px;
     display: block;
-    flex-direction: row;
     border: 1px solid #acacac;
     margin-bottom: 80px;
     &__title {
-        font-size: 1.8rem;
+        font-size: 4vw;
         line-height: 1;
-        text-transform: uppercase;
+        text-transform: lowercase;
         margin-bottom: 10px;
+        flex-basis: 65%;
+        span {
+            font-family: Roboto, Arial, sans-serif !important;
+            font-size: 7vw;
+            text-transform: uppercase;
+        }
+    }
+    &__icon-list {
+        flex-basis: 35%;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        margin-bottom: 0;
+        margin-left: 2%;
+        li {
+            width: 30%;
+            list-style-type: none;
+            margin-left: 2%;
+        }
     }
     &__description {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 20px;
+        margin-top: 10px;
+        color: white;
+        font-style: italic;
+        text-align: center;
     }
-    &__left {
-        flex-basis: 50%;
+    &__top {
         padding: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        background-color: #337a5c;
+        
     }
     &__right {
-        flex-basis: 50%;
         border-left: 1px solid #acacac;
         padding: 0;
     }
-    &__img {
-        width: 100px;
-        height: auto;
-        position: absolute;
-        top: 0;
-        left: -115px;
-        // float: left;
-    }
     &__textarea {
         // float: right;
-        margin-left: 120px;
         position: relative;
-        button {
-            text-transform: uppercase;
-            padding: 1em;
-            a {
-                color: white;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 1.125rem;
-                &:hover, &:visited {
-                    color: white;
-                }
-            }
-           
-        }
+        color: white;
+        display: flex;
+        flex-direction: row;
+        display: flex;
+        flex-direction: row;
     }
     .player {
         // height: 200px;
         overflow: hidden;
     }
 }
+@media all and (min-width: 768px) {
+    .podcast-player {
+        &__title {
+            font-size: 2.4vw;
+            span {
+                font-size: 4.8vw;
+            }
+        }
+        &__description {
+            font-size: 1.5rem;
+        }
+    }
+} 
 @media all and (min-width: 48em) {
     .article-callout {
         display: flex;
@@ -535,8 +549,16 @@
             }
         }
     }
+}
+
+@media all and (min-width: 1366px) {
     .podcast-player {
-        display: flex;
+        &__title {
+            font-size: 2.2rem;
+            span {
+                font-size: 4.5rem; 
+            }
+        }
     }
 }
 
