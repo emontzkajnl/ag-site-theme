@@ -421,11 +421,12 @@
     border: 1px solid #acacac;
     margin-bottom: 80px;
     &__title {
-        font-size: 4vw;
+        font-size: 3.8vw;
         line-height: 1;
         text-transform: lowercase;
         margin-bottom: 10px;
         flex-basis: 65%;
+        margin-top: 0;
         span {
             font-family: Roboto, Arial, sans-serif !important;
             font-size: 7vw;
@@ -452,7 +453,7 @@
         margin-top: 10px;
         color: white;
         font-style: italic;
-        text-align: center;
+        text-align: left;
     }
     &__top {
         padding: 15px;

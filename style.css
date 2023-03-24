@@ -2216,11 +2216,12 @@ table {
 }
 
 .podcast-player__title {
-	font-size: 4vw;
+	font-size: 3.8vw;
 	line-height: 1;
 	text-transform: lowercase;
 	margin-bottom: 10px;
 	flex-basis: 65%;
+	margin-top: 0;
 }
 
 .podcast-player__title span {
@@ -2251,7 +2252,7 @@ table {
 	margin-top: 10px;
 	color: white;
 	font-style: italic;
-	text-align: center;
+	text-align: left;
 }
 
 .podcast-player__top {
