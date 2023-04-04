@@ -2248,7 +2248,7 @@ table {
 
 .podcast-player__description {
 	font-size: 1rem;
-	margin-bottom: 20px;
+	margin-bottom: 0;
 	margin-top: 10px;
 	color: white;
 	font-style: italic;
@@ -2272,6 +2272,7 @@ table {
 	flex-direction: row;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 
 .podcast-player .player {
@@ -2286,7 +2287,7 @@ table {
 		font-size: 4.8vw;
 	}
 	.podcast-player__description {
-		font-size: 1.5rem;
+		font-size: 2.2vw;
 	}
 }
 
@@ -2347,6 +2348,9 @@ table {
 	}
 	.podcast-player__title span {
 		font-size: 4.5rem;
+	}
+	.podcast-player__description {
+		font-size: 2rem;
 	}
 }
 
