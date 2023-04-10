@@ -1429,7 +1429,9 @@ body {
 
 .megahero #player {
 	width: 100%;
-	height: auto;
+	height: 43vw;
+	margin-top: -60px;
+	margin-bottom: -50px;
 }
 
 .megahero.below-header {
