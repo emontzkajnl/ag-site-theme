@@ -1904,6 +1904,11 @@ table {
 	width: 100%;
 }
 
+.custom-article-list h3 {
+	font-size: .875rem;
+	margin-top: 0;
+}
+
 .video-section {
 	margin-bottom: 50px;
 }
