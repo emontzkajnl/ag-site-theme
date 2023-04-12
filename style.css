@@ -1409,7 +1409,7 @@ body {
 
 .megahero {
 	display: none;
-	height: auto;
+	height: 43vw;
 	overflow: hidden;
 	position: relative;
 }
@@ -1429,7 +1429,7 @@ body {
 
 .megahero #player {
 	width: 100%;
-	height: 43vw;
+	height: 56vw;
 	margin-top: -60px;
 	margin-bottom: -50px;
 }
