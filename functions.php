@@ -232,21 +232,26 @@ function prefix_insert_post_ads( $content ) {
 	$ad_code = ob_get_contents();
 	ob_end_clean();
 	if ( is_single() && ! is_admin() ) {
-		return prefix_insert_after_paragraph( $ad_code, 3, $content );
+		return prefix_insert_after_paragraph( $ad_code, 2, $content );
 	}
 return $content;
 }
 // Parent Function that makes the magic happen
 function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
+	// $p_id = $paragraph_id;
 	$closing_p = '</p>';
 	$paragraphs = explode( $closing_p, $content );
+
+	if (str_contains( $paragraphs[2], 'infobox' )) {
+		$paragraph_id = 1;
+	}
 	foreach ($paragraphs as $index => $paragraph) {
 
 		if ( trim( $paragraph ) ) {
 			$paragraphs[$index] .= $closing_p;
 		}
 
-		if ( $paragraph_id == $index + 1 ) {
+		if ( $paragraph_id == $index ) {
 			$paragraphs[$index] .= $insertion;
 		}
 	}
