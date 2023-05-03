@@ -160,7 +160,9 @@ function ag_sites_scripts() {
 	wp_enqueue_script( 'waypoint', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array(), _ag_site_theme_VERSION , true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery', 'headroom','waypoint'), _ag_site_theme_VERSION , true );
 	wp_enqueue_script( 'ag-sites-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _ag_site_theme_VERSION, true );
-
+	wp_localize_script( 'main', 'params', array(
+		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php'
+	) );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -258,3 +260,34 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
 	
 	return implode( '', $paragraphs );
 }
+
+function load_more_cats() {
+	// error_log(var_dump($_POST, true));
+	$args = array(
+		'post_type'			=> 'post',
+		// 'cat'				=> $_POST['cat'],
+		'posts_per_page'	=> 10,
+		'post_status'       => 'publish',
+		// 'paged'				=> $_POST['page']
+	);
+	$query_posts($args);
+	if (have_posts()):
+		while (have_posts()): the_post(); ?>
+		<div class="col-12 m-col-12 l-col-6 custom-article-list">
+		<a href="<?php echo esc_url( get_permalink() ); ?>">
+		<div class="two-thirds-container">
+		<?php ag_sites_post_thumbnail(get_the_ID(), 'stm-gm-635-345'); ?>
+		</div></a>
+		
+		<?php 
+		// echo '<p class="cat-text"><a href="'.esc_url(get_category_link($cat[0]->term_id)).'">'.$cat[0]->name.'</a></p>';
+		echo '<h2><a class="title-link" href="'.esc_url( get_permalink() ).'">'.get_the_title().'</a></h2>';?>
+		
+	</div>
+		<?php endwhile;
+	endif;
+	wp_reset_query();
+	die;
+}
+add_action('wp_ajax_loadMoreCats', 'load_more_cats');
+add_action('wp_ajax_nopriv_loadMoreCats', 'load_more_cats');

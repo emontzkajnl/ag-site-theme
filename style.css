@@ -11307,6 +11307,9 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (max-width: 1059px) {
+	.nav-container .header-social {
+		display: none;
+	}
 	.nav-container.toggled {
 		width: 100%;
 		position: fixed;
@@ -11397,9 +11400,11 @@ readers do not read off random characters that represent icons */
 		width: auto;
 		display: inline-block;
 	}
-	.header-social {
+	.main-navigation .header-social {
 		margin: 80px 2em 0;
-		display: none;
+	}
+	#colophon .header-social {
+		margin-bottom: 30px;
 	}
 }
 

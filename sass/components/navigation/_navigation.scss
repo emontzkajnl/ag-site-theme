@@ -112,6 +112,9 @@
 
 @media screen and (max-width: 1059px) {
 	.nav-container {
+		.header-social {
+			display: none;
+		}
 		&.toggled {
 			width: 100%;
 			position: fixed;
@@ -207,11 +210,16 @@
 				display: inline-block;
 			}
 		}
+		.header-social {
+			margin: 80px 2em 0;
+			// display: none;
+		}
 	}
-	.header-social {
-		margin: 80px 2em 0;
-		display: none;
+	
+	#colophon .header-social {
+		margin-bottom: 30px;
 	}
+	
 }
 
 

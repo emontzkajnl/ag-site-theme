@@ -54,7 +54,32 @@
     }
   });
 
-
+  
+  $('#load-more-cats').on('click', function() {
+    const btn = $(this);
+    let paged = btn.data('paged');
+    const data = {
+      action: "loadMoreCats",
+      cat: btn.data('cat'),
+      page: paged++,
+      url: '/wp-admin/admin-ajax.php'
+    }
+    console.dir(data);
+    $.ajax({
+      type: 'POST',
+      data: data,
+      dataType: 'html',
+      success: function(res){
+        if (res) {
+          // console.dir(res);
+          $('.alm-container').append(res);
+        } else {
+          // console.log('no res');
+        }
+        
+      }
+    });
+  });
 
 
 })(jQuery);

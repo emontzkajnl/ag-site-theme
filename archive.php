@@ -19,7 +19,6 @@ get_header();
 					if( function_exists('the_ad_placement') ) { 
 						the_ad_placement('leaderboard');
 					}
-					// print_r($q);
 				
 				// the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
@@ -37,6 +36,7 @@ get_header();
 					} else {
 						the_archive_title( '<h1 class="page-title color__primary">', '</h1>' );
 					} ?>
+					<div class="alm-container">
 				<div class="row">
 
 			
@@ -49,6 +49,7 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
+				// print_r($wp_query->query_vars);
 				if ($wp_query->current_post === 4 && function_exists('the_ad_placement') ){
 					echo '</div><div style="display: flex; justify-content: center;">';
 					the_ad_placement('in-content');
@@ -59,7 +60,14 @@ get_header();
 
 			endwhile; ?>
 			</div>
-			<?php the_posts_navigation(); ?>
+			<div class="btn__wrapper">
+			<?php $query_vars = $wp_query->query_vars; 
+			$paged = $query_vars['paged'] ? $query_vars['paged'] : 1; ?>
+			<!-- <a href="#!" data-cat="<?php //echo $query_vars['cat']; ?>" data-paged="<?php //echo $paged; ?>" class="btn btn__primary" id="load-more-cats">Load more</a> -->
+			</div>
+			</div>
+			<?php  //print_r($wp_query->query_vars); //the_posts_navigation();
+			 ?>
 			</div>
 
 		<?php else :
