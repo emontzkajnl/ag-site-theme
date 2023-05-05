@@ -59,13 +59,19 @@ get_header();
 				
 
 			endwhile; ?>
-			</div>
-			<div class="btn__wrapper">
+			</div><!-- row -->
+			</div><!-- alm-container -->
+			<div style="text-align: center;">
 			<?php $query_vars = $wp_query->query_vars; 
 			$paged = $query_vars['paged'] ? $query_vars['paged'] : 1; ?>
-			<!-- <a href="#!" data-cat="<?php //echo $query_vars['cat']; ?>" data-paged="<?php //echo $paged; ?>" class="btn btn__primary" id="load-more-cats">Load more</a> -->
+			<script>
+				// window.document.params.page = "<?php //echo $paged; ?>";
+				// console.log('start');
+				// console.log(window.document);
+			</script>
+			<button data-cat="<?php echo $query_vars['cat']; ?>" data-paged="<?php echo $paged; ?>" class="background__primary font__serif" id="load-more-cats">LOAD MORE</button>
 			</div>
-			</div>
+			
 			<?php  //print_r($wp_query->query_vars); //the_posts_navigation();
 			 ?>
 			</div>

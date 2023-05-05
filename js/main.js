@@ -54,27 +54,70 @@
     }
   });
 
-  
+
+let currentPage = 1;
   $('#load-more-cats').on('click', function() {
     const btn = $(this);
-    let paged = btn.data('paged');
+    currentPage++;
+    // let page = btn.data('paged');
+    window.params.currentpage = btn.data('paged');
     const data = {
       action: "loadMoreCats",
       cat: btn.data('cat'),
-      page: paged++,
-      url: '/wp-admin/admin-ajax.php'
+      page: currentPage,
+      // page: window.params.currentpage,
+      url: params.ajaxurl,
     }
-    console.dir(data);
+    // console.dir(data);
     $.ajax({
       type: 'POST',
       data: data,
+      url: params.ajaxurl,
       dataType: 'html',
       success: function(res){
         if (res) {
           // console.dir(res);
           $('.alm-container').append(res);
+          console.log('page is ', currentPage);
+          // window.params.currentpage = window.params.currentpage + 1;
+          // console.log('page  is ', window.params.currentpage);
         } else {
-          // console.log('no res');
+          console.log('no res');
+          $('#load-more-cats').hide();
+        }
+        
+      }
+    });
+  });
+
+  $('#load-more-search').on('click', function() {
+    const btn = $(this);
+    currentPage++;
+    // let page = btn.data('paged');
+    window.params.currentpage = btn.data('paged');
+    const data = {
+      action: "loadMoreSearch",
+      search: btn.data('search'),
+      page: currentPage,
+      // page: window.params.currentpage,
+      url: params.ajaxurl,
+    }
+    // console.dir(data);
+    $.ajax({
+      type: 'POST',
+      data: data,
+      url: params.ajaxurl,
+      dataType: 'html',
+      success: function(res){
+        if (res) {
+          // console.dir(res);
+          $('.alm-container').append(res);
+          console.log('page is ', currentPage);
+          // window.params.currentpage = window.params.currentpage + 1;
+          // console.log('page  is ', window.params.currentpage);
+        } else {
+          console.log('no res');
+          $('#load-more-search').hide();
         }
         
       }
