@@ -11306,7 +11306,7 @@ readers do not read off random characters that represent icons */
 	left: 10px;
 }
 
-@media screen and (max-width: 1059px) {
+@media screen and (max-width: 1399px) {
 	.nav-container .header-social {
 		display: none;
 	}
@@ -11408,7 +11408,7 @@ readers do not read off random characters that represent icons */
 	}
 }
 
-@media screen and (min-width: 1060px) {
+@media screen and (min-width: 1400px) {
 	.bar {
 		display: none;
 	}
