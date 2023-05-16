@@ -235,7 +235,7 @@ function prefix_insert_post_ads( $content ) {
 	$ad_code = ob_get_contents();
 	ob_end_clean();
 	if ( is_single() && ! is_admin() ) {
-		return prefix_insert_after_paragraph( $ad_code, 2, $content );
+		return prefix_insert_after_paragraph( $ad_code, 5, $content );
 	}
 return $content;
 }
@@ -243,20 +243,30 @@ return $content;
 function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
 	// $p_id = $paragraph_id;
 	$closing_p = '</p>';
+	//create array seperated by paragraphs
 	$paragraphs = explode( $closing_p, $content );
 
-	if (str_contains( $paragraphs[2], 'infobox' )) {
-		$paragraph_id = 1;
-	}
+	// if (str_contains( $paragraphs[2], 'infobox' )) {
+	// 	$paragraph_id = 1;
+	// }
+	$has_infobox = false;
 	foreach ($paragraphs as $index => $paragraph) {
 
-		if ( trim( $paragraph ) ) {
+		// if ( trim( $paragraph ) ) {
 			$paragraphs[$index] .= $closing_p;
-		}
+			// $paragraphs[$index] .= 'index is'.$index;
+			if (str_contains( $paragraphs[$index], 'infobox') && $index < $paragraph_id) {
+				$paragraphs[$index - 1] .= $insertion;
+				$has_infobox = true;
+			}
+			if (!$has_infobox && $index == $paragraph_id) {
+				$paragraphs[$index] .= $insertion;
+			}
+		// }
 
-		if ( $paragraph_id == $index ) {
-			$paragraphs[$index] .= $insertion;
-		}
+		// if ( $paragraph_id == $index ) {
+		// 	$paragraphs[$index] .= $insertion;
+		// }
 	}
 	
 	return implode( '', $paragraphs );
