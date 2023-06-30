@@ -276,11 +276,16 @@ function load_more_cats() {
 	// error_log(var_dump($_POST, true));
 	$args = array(
 		'post_type'			=> 'post',
-		'cat'				=> $_POST['cat'],
+		// 'cat'				=> $_POST['cat'],
 		'posts_per_page'	=> 10,
 		'post_status'       => 'publish',
 		'paged'				=> $_POST['page']
 	);
+	if ($_POST['cat']) {
+		$args['cat'] = $_POST['cat'];
+	} else { // this is a tag page
+		$args['tag'] = $_POST['tag'];
+	}
 	query_posts($args);
 	if(have_posts()): 
 		echo '<div class="row">';

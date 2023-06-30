@@ -110,7 +110,7 @@
 	}
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1180px) {
 	.nav-container {
 		.header-social {
 			display: none;
@@ -223,7 +223,7 @@
 }
 
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1181px) {
 
 	.bar {
 		display: none;
@@ -280,7 +280,7 @@
 					font-size: 1.5rem;
 					text-transform: uppercase;
 					font-weight: normal;
-					font-size: 1.375rem;
+					font-size: 1rem;
 					letter-spacing: .2rem;
 				}
 			}
@@ -326,7 +326,23 @@
 		}
 
 	}
-
+	.search-btn {
+		padding: 0.3em;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.main-navigation {
+		ul {
+			> li {
+				a {
+					font-size: 1.375rem;
+				}
+			}
+		}
+	}
+	.search-btn {
+		padding: 1em;
+	}
 }
 
 .comment-navigation,

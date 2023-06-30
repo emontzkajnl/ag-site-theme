@@ -69,7 +69,7 @@ get_header();
 				// console.log('start');
 				// console.log(window.document);
 			</script>
-			<button data-cat="<?php echo $query_vars['cat']; ?>" data-paged="<?php echo $paged; ?>" class="background__primary font__serif" id="load-more-cats">LOAD MORE</button>
+			<button data-cat="<?php echo $query_vars['cat']; ?>" data-tag="<?php echo $query_vars['tag'] ?>" data-paged="<?php echo $paged; ?>" class="background__primary font__serif" id="load-more-cats">LOAD MORE</button>
 			</div>
 			
 			<?php  //print_r($wp_query->query_vars); //the_posts_navigation();

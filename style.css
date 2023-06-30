@@ -11306,7 +11306,7 @@ readers do not read off random characters that represent icons */
 	left: 10px;
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1180px) {
 	.nav-container .header-social {
 		display: none;
 	}
@@ -11408,7 +11408,7 @@ readers do not read off random characters that represent icons */
 	}
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1181px) {
 	.bar {
 		display: none;
 	}
@@ -11457,7 +11457,7 @@ readers do not read off random characters that represent icons */
 		font-size: 1.5rem;
 		text-transform: uppercase;
 		font-weight: normal;
-		font-size: 1.375rem;
+		font-size: 1rem;
 		letter-spacing: .2rem;
 	}
 	.main-navigation ul ul {
@@ -11482,6 +11482,18 @@ readers do not read off random characters that represent icons */
 	}
 	.menu-item-has-children > a {
 		position: relative;
+	}
+	.search-btn {
+		padding: 0.3em;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.main-navigation ul > li a {
+		font-size: 1.375rem;
+	}
+	.search-btn {
+		padding: 1em;
 	}
 }
 

@@ -64,6 +64,7 @@ let currentPage = 1;
     const data = {
       action: "loadMoreCats",
       cat: btn.data('cat'),
+      tag: btn.data('tag'),
       page: currentPage,
       // page: window.params.currentpage,
       url: params.ajaxurl,
