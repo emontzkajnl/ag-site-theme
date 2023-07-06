@@ -23,7 +23,7 @@ get_header();
             echo '<h1 class="entry-title">'.get_the_title(  ).'</h1>';
             echo the_content();
             $calameo = get_post_meta(get_the_ID(  ), 'calameo_id');
-            echo '<div class="col-12 m-col-12"><iframe style="margin: 0 auto;" src="//v.calameo.com/?bkcode=' . $calameo[0] . '&amp;page=1" width="100%" height="800" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div>'; 
+            echo '<div class="col-12 m-col-12 mag-container"><iframe style="margin: 0 auto;" src="//v.calameo.com/?bkcode=' . $calameo[0] . '&amp;page=1" width="100%" height="800" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div>'; 
             ?>
             
 

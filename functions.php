@@ -229,7 +229,7 @@ add_action('parse_query', 'mag_offset');
 //Insert ads after third paragraph of single post content.
 add_filter( 'the_content', 'prefix_insert_post_ads' );
 function prefix_insert_post_ads( $content ) {
-	if (get_post_type() == 'magazine') {return $content;}
+	if (get_post_type() == '') {return $content;}
 	ob_start();
 	if( function_exists('the_ad_placement') ) { the_ad_placement('in-content'); }
 	$ad_code = ob_get_contents();
