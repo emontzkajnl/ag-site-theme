@@ -45,7 +45,7 @@
 				if (function_exists( 'ADDTOANY_SHARE_SAVE_KIT' )) {
 					echo do_shortcode('[addtoany url="' . esc_url(get_the_permalink(get_the_ID())).'" ]');
 				}
-				if (get_field('subheading')) {echo '<p class="post-excerpt">'.get_field('subheading').'</p>';}
+				if (get_field('subheading')) {echo '<h2 class="post-excerpt">'.get_field('subheading').'</h2>';}
 				// if ( function_exists('yoast_breadcrumb') ) {
 				// 	yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 				//   }
