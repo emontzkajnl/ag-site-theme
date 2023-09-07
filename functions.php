@@ -286,10 +286,12 @@ function load_more_cats() {
 	} else { // this is a tag page
 		$args['tag'] = $_POST['tag'];
 	}
-	query_posts($args);
-	if(have_posts()): 
+	$cat_query = new WP_Query($args);
+	// var_dump(print_r($cat_query, true));
+	if($cat_query->have_posts()): 
+		// echo '<h2>max pages is '.$cat_query->max_num_pages.'</h2>';
 		echo '<div class="row">';
-		while(have_posts()): the_post(); ?>
+		while($cat_query->have_posts()): $cat_query->the_post(); ?>
 		<div class="col-12 m-col-12 l-col-6 custom-article-list">
 		<a href="<?php echo esc_url( get_permalink() ); ?>">
 		<div class="two-thirds-container">
@@ -302,10 +304,11 @@ function load_more_cats() {
 		
 	</div>
 		<?php endwhile;
+		echo '</div>'; // .row
 	endif;
-	echo '</div>'; // .row
-	wp_reset_query();
-	wp_die(  );
+	wp_reset_postdata(  );
+	// wp_reset_query();
+	wp_die( );
 }
 add_action('wp_ajax_loadMoreCats', 'load_more_cats');
 add_action('wp_ajax_nopriv_loadMoreCats', 'load_more_cats');

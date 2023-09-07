@@ -79,11 +79,14 @@ let currentPage = 1;
         if (res) {
           // console.dir(res);
           $('.alm-container').append(res);
-          console.log('page is ', currentPage);
+          console.log('page is ', currentPage, ' max is ', window.maxpages);
           // window.params.currentpage = window.params.currentpage + 1;
           // console.log('page  is ', window.params.currentpage);
         } else {
           console.log('no res');
+          $('#load-more-cats').hide();
+        }
+        if (currentPage <= maxpages) {
           $('#load-more-cats').hide();
         }
         
