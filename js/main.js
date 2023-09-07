@@ -86,7 +86,7 @@ let currentPage = 1;
           console.log('no res');
           $('#load-more-cats').hide();
         }
-        if (currentPage <= maxpages) {
+        if (currentPage >= maxpages) {
           $('#load-more-cats').hide();
         }
         
