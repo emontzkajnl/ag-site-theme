@@ -230,10 +230,13 @@ add_action('parse_query', 'mag_offset');
 add_filter( 'the_content', 'prefix_insert_post_ads' );
 function prefix_insert_post_ads( $content ) {
 	if (get_post_type() == '') {return $content;}
-	ob_start();
-	if( function_exists('the_ad_placement') ) { the_ad_placement('in-content'); }
-	$ad_code = ob_get_contents();
-	ob_end_clean();
+	// ob_start();
+	// if( function_exists('the_ad_placement') ) { the_ad_placement('in-content'); }
+	// $ad_code = ob_get_contents();
+	$ad_code = '<div class="advertisement">Advertisement</div>';
+	$ad_code .= '<div id="div-gpt-ad-1694457127306-0" style="min-width: 300px; min-height: 250px;">';
+	$ad_code .= '<script>googletag.cmd.push(function() { googletag.display("div-gpt-ad-1694457127306-0"); });</script>';
+	// ob_end_clean();
 	if ( is_single() && ! is_admin() ) {
 		return prefix_insert_after_paragraph( $ad_code, 5, $content );
 	}
