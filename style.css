@@ -11528,6 +11528,11 @@ readers do not read off random characters that represent icons */
 	display: block;
 }
 
+.advertisement {
+	width: 100%;
+	text-align: center;
+}
+
 .updated:not(.published) {
 	display: none;
 }
