@@ -235,7 +235,7 @@ function prefix_insert_post_ads( $content ) {
 	// $ad_code = ob_get_contents();
 	$ad_code = '<div class="advertisement">Advertisement</div>';
 	$ad_code .= '<div id="div-gpt-ad-1694457127306-0" style="min-width: 300px; min-height: 250px; text-align: center;">';
-	$ad_code .= '<script>googletag.cmd.push(function() { googletag.display("div-gpt-ad-1694457127306-0"); });</script>';
+	$ad_code .= '<script>googletag.cmd.push(function() { googletag.display("div-gpt-ad-1694457127306-0"); });</script></div>';
 	// ob_end_clean();
 	if ( is_single() && ! is_admin() ) {
 		return prefix_insert_after_paragraph( $ad_code, 5, $content );
