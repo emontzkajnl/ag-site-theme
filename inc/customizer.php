@@ -49,6 +49,13 @@ function ag_sites_customize_register( $wp_customize ) {
 		'transport' 	=> 'refresh',
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
+	$wp_customize->add_setting( 'header_background_display',  array(
+		'type'			=> 'option',
+		'capability'	=> 'edit_theme_options',
+		'default'		=> '#ffffff',
+		'transport' 	=> 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
 	$wp_customize->add_setting( 'footer_background_display',  array(
 		'type'			=> 'option',
 		'capability'	=> 'edit_theme_options',
@@ -69,6 +76,11 @@ function ag_sites_customize_register( $wp_customize ) {
 		'label' => __( 'Secondary Color', 'ag-sites'), 
 		'section' => 'colors',
 		'settings'		=> 'secondary_color_display'
+	)));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_background', array(
+		'label' => __( 'Header Background', 'ag-sites'), 
+		'section' => 'colors',
+		'settings'		=> 'header_background_display'
 	)));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_background', array(
 		'label' => __( 'Footer Background', 'ag-sites'), 
@@ -140,6 +152,7 @@ add_action( 'customize_preview_init', 'ag_sites_customize_preview_js' );
 function ag_sites_customize_css() { 
 	$secondary_color = get_option('secondary_color_display');
 	$primary_color = get_option('primary_color_display');
+	$header_background = get_option('header_background_display');
 	$footer_background = get_option('footer_background_display'); ?>
 <style type="text/css">
 	/**
@@ -163,7 +176,9 @@ function ag_sites_customize_css() {
 	.background__secondary {
 		background-color: <?php echo $secondary_color; ?>;
 	}
-
+	.site-header {
+		background-color: <?php echo $header_background; ?>
+	}
 	.site-footer {
 		background-color: <?php echo $footer_background; ?>;
 	}
