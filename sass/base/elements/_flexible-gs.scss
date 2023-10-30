@@ -3,10 +3,10 @@
 // Map of breakpoints
 $flexible-breakpoint-map: (
   xs: 0,
-  s: 34em,
-  m : 48em,
-  l : 62em,
-  xl: 75em
+  s: 34em, // 544px
+  m : 48em, // 768px
+  l : 62em, // 992px
+  xl: 75em // 1200px
 );
 
 // Default responsive features
