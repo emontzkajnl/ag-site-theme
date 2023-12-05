@@ -162,7 +162,9 @@ function ag_sites_scripts() {
 	wp_enqueue_script( 'ag-sites-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _ag_site_theme_VERSION, true );
 	wp_localize_script( 'main', 'params', array(
 		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
-		'currentpage'	=> ''
+		'currentpage'	=> '',
+		'currentRecentPage'	=> 1,
+		'currentPopularPage'	=> 1
 	) );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
