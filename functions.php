@@ -226,54 +226,7 @@ function mag_offset($query) {
 
 add_action('parse_query', 'mag_offset');
 
-//Insert ads after third paragraph of single post content.
-add_filter( 'the_content', 'prefix_insert_post_ads' );
-function prefix_insert_post_ads( $content ) {
-	if (get_post_type() == '') {return $content;}
-	// ob_start();
-	// if( function_exists('the_ad_placement') ) { the_ad_placement('in-content'); }
-	// $ad_code = ob_get_contents();
-	$ad_code = '<div class="advertisement">Advertisement</div>';
-	$ad_code .= '<div style="width: 100%; text-align: center;"><div id="div-gpt-ad-1694457127306-0" style="min-width: 300px; min-height: 250px; display: inline-block;">';
-	$ad_code .= '<script>googletag.cmd.push(function() { googletag.display("div-gpt-ad-1694457127306-0"); });</script></div></div>';
-	// ob_end_clean();
-	if ( is_single() && ! is_admin() ) {
-		return prefix_insert_after_paragraph( $ad_code, 5, $content );
-	}
-return $content;
-}
-// Parent Function that makes the magic happen
-function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
-	// $p_id = $paragraph_id;
-	$closing_p = '</p>';
-	//create array seperated by paragraphs
-	$paragraphs = explode( $closing_p, $content );
 
-	// if (str_contains( $paragraphs[2], 'infobox' )) {
-	// 	$paragraph_id = 1;
-	// }
-	$has_infobox = false;
-	foreach ($paragraphs as $index => $paragraph) {
-
-		// if ( trim( $paragraph ) ) {
-			$paragraphs[$index] .= $closing_p;
-			// $paragraphs[$index] .= 'index is'.$index;
-			if (str_contains( $paragraphs[$index], 'infobox') && $index < $paragraph_id) {
-				$paragraphs[$index - 1] .= $insertion;
-				$has_infobox = true;
-			}
-			if (!$has_infobox && $index == $paragraph_id) {
-				$paragraphs[$index] .= $insertion;
-			}
-		// }
-
-		// if ( $paragraph_id == $index ) {
-		// 	$paragraphs[$index] .= $insertion;
-		// }
-	}
-	
-	return implode( '', $paragraphs );
-}
 
 function load_more_cats() {
 	// error_log(var_dump($_POST, true));
