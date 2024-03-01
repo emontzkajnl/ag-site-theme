@@ -1,6 +1,6 @@
 .site-header {
     position: fixed;
-    height: 150px;
+    height: 100px;
     left: 0;
     right: 0;
     width: 100% !important;
@@ -13,11 +13,11 @@
     align-items: center;
     background-color: white;
     &.headroom--pinned {
-        height: 150px;
+        height: 100px;
         z-index: 10;
       }
       &.headroom--unpinned {
-        height: 120px;
+        height: 70px;
       }
 }
 .site-main {
