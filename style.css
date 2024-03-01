@@ -1350,7 +1350,7 @@ body {
 
 .site-header {
 	position: fixed;
-	height: 150px;
+	height: 100px;
 	left: 0;
 	right: 0;
 	width: 100% !important;
@@ -1365,12 +1365,12 @@ body {
 }
 
 .site-header.headroom--pinned {
-	height: 150px;
+	height: 100px;
 	z-index: 10;
 }
 
 .site-header.headroom--unpinned {
-	height: 120px;
+	height: 70px;
 }
 
 .site-main {
