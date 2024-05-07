@@ -22,7 +22,10 @@
 
 	<div class="entry-content">
 		<?php
-	
+		if (!is_front_page()) {
+			the_title( '<h1 class="entry-title">', '</h1>' ); 
+		}
+		
 		the_content();
 
 		// wp_link_pages(
