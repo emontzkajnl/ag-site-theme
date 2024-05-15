@@ -2319,6 +2319,15 @@ table {
 		width: 50%;
 		float: right;
 	}
+	.recipe-block.center-rblock {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	.recipe-block.left-rblock {
+		width: 50%;
+		float: left;
+	}
 	.read-the-magazine img {
 		max-width: 320px;
 	}
