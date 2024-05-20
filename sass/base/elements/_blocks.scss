@@ -5,10 +5,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 50px;
-        position: relative;
-        > * {
-            margin-bottom: 0; 
-        }
+        // position: relative;
+       
     }
     .faps-featured {
         height: 0;
@@ -28,10 +26,10 @@
         }
     }
     .faps-title {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        // position: absolute;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
         width: 100%;
         padding: 16px;
         background-color: rgba(256, 256, 256, 0.8);
