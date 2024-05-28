@@ -59,17 +59,14 @@ let currentPage = 1;
   $('#load-more-cats').on('click', function() {
     const btn = $(this);
     currentPage++;
-    // let page = btn.data('paged');
     window.params.currentpage = btn.data('paged');
     const data = {
       action: "loadMoreCats",
       cat: btn.data('cat'),
       tag: btn.data('tag'),
       page: currentPage,
-      // page: window.params.currentpage,
       url: params.ajaxurl,
     }
-    // console.dir(data);
     $.ajax({
       type: 'POST',
       data: data,
@@ -77,7 +74,6 @@ let currentPage = 1;
       dataType: 'html',
       success: function(res){
         if (res) {
-          // console.dir(res);
           $('.alm-container').append(res);
           console.log('page is ', currentPage, ' max is ', window.maxpages);
           // window.params.currentpage = window.params.currentpage + 1;
