@@ -2093,6 +2093,7 @@ table {
 
 .article-callout {
 	margin: 50px 0;
+	display: flex;
 }
 
 .article-callout img {
@@ -2312,6 +2313,11 @@ a.unstyle-link:hover, a.unstyle-link:visited, a.unstyle-link:active {
 
 .align-center {
 	text-align: center;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
 }
 
 .align-right {
