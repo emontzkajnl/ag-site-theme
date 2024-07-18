@@ -1394,7 +1394,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	flex-shrink: 0;
-	width: 250px;
 }
 
 .site-logo {
@@ -1436,12 +1435,6 @@ body {
 
 .megahero.below-header {
 	margin-top: -25px;
-}
-
-@media all and (min-width: 550px) {
-	.site-branding {
-		width: 300px;
-	}
 }
 
 @media all and (min-width: 768px) {

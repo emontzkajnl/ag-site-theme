@@ -32,7 +32,7 @@ get_header();
 						echo '<h1 class="page-title color__primary">'.$q->cat_name.'</h1>';
 						echo '<p style="font-size: 20px;">'.$q->category_description.'</p>';
 					} elseif (is_author()){
-						echo '<h1 class="page-title color__primary">Posts by '.get_the_author().'</h1>';
+						echo '<h1 class="page-title color__primary">Articles by '.get_the_author().'</h1>';
 					} else {
 						the_archive_title( '<h1 class="page-title color__primary">', '</h1>' );
 					} ?>
