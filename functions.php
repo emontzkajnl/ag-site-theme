@@ -303,3 +303,7 @@ function load_more_search() {
 }
 add_action('wp_ajax_loadMoreSearch', 'load_more_search');
 add_action('wp_ajax_nopriv_loadMoreSearch', 'load_more_search');
+
+add_filter( 'redirection_role', function( $role ) {
+	return 'edit_posts';  // Add your chosen capability or role here
+	} );
