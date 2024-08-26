@@ -5,3 +5,24 @@
 .bypostauthor {
 	display: block;
 }
+ul.comment-list {
+	padding-left: 0;
+	margin-left: 0;
+	max-width: 768px;
+	li {
+		list-style: none;
+	
+	}
+	.comment-body {
+		cite.fn {
+			font-style: normal;
+		  font-weight: bold;
+		}
+	}
+}
+.comment-reply-link {
+	padding: 5px 40px;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+}

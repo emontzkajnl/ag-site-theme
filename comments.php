@@ -20,27 +20,29 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area parent-theme">
 
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="section-heading" style="text-align: center;">Comments</h2>
+		<h2 class="section-heading">Comments</h2>
 		<hr class="green-hr" />
 
 		<?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
+		<ul class="comment-list">
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
+					'style'      => 'ul',
 					'short_ping' => true,
+					'callback'	 => 'ag_comments'
+
 				)
 			);
 			?>
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 		<?php
 		the_comments_navigation();
