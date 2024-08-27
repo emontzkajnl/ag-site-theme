@@ -27,7 +27,6 @@ if ( post_password_required() ) {
 	if ( have_comments() ) :
 		?>
 		<h2 class="section-heading">Comments</h2>
-		<hr class="green-hr" />
 
 		<?php the_comments_navigation(); ?>
 
