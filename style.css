@@ -11528,6 +11528,18 @@ figcaption {
 	border-radius: 50% !important;
 }
 
+.offwhite-bkgrnd {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+	max-width: unset;
+}
+
+.offwhite-bkgrnd > * {
+	max-width: 1366px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 @media (max-width: 781px) {
 	.ag-site-sidebar-layout.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:only-child) {
 		flex-basis: 100% !important;
