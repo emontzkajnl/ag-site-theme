@@ -2086,7 +2086,13 @@ table {
 
 .article-callout {
 	margin: 50px 0;
-	display: flex;
+	display: block;
+}
+
+.article-callout__img-container {
+	position: relative;
+	width: 100%;
+	min-height: 300px;
 }
 
 .article-callout img {
@@ -2094,6 +2100,7 @@ table {
 	height: 100% !important;
 	max-width: none;
 	object-fit: cover;
+	position: absolute;
 }
 
 .article-callout__text {
@@ -2119,6 +2126,23 @@ table {
 .article-callout__title a {
 	text-decoration: none;
 	color: #414040 !important;
+}
+
+.jci-infobox {
+	margin-bottom: 90px;
+	margin-top: 30px;
+	margin: 30px auto 90px;
+	max-width: 768px;
+}
+
+.jci-infobox__container {
+	border-radius: 15px;
+	padding: 45px 19px;
+	position: relative;
+	font-weight: 400;
+	text-align: center;
+	border-width: 2px;
+	border-style: solid;
 }
 
 .afbs ul {
@@ -2227,11 +2251,11 @@ table {
 		display: flex;
 		flex-direction: row;
 	}
-	.article-callout .ac-img-container {
-		flex-basis: 50%;
+	.article-callout__img-container {
+		width: 50%;
 	}
-	.article-callout .ac-text {
-		flex-basis: 50%;
+	.article-callout__text {
+		width: 50%;
 	}
 }
 
