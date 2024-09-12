@@ -2355,6 +2355,19 @@ a.unstyle-link:hover, a.unstyle-link:visited, a.unstyle-link:active {
 	float: left;
 }
 
+.object-fit-image {
+	position: relative;
+}
+
+.object-fit-image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
 @media all and (max-width: 520px) {
 	.align-right, .alignright, .align-left, .alignleft {
 		float: none !important;

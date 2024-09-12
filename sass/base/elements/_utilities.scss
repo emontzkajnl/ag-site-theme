@@ -35,6 +35,17 @@ a.unstyle-link {
 .float-left {
     float: left;
 }
+.object-fit-image {
+    position: relative;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}
 @media all and (max-width: 520px) {
     .align-right, .alignright, .align-left, .alignleft {
         float: none !important;
