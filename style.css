@@ -2236,6 +2236,68 @@ table {
 	overflow: hidden;
 }
 
+.jcims {
+	max-width: 100% !important;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.jcims .handwritten {
+	margin-top: 20px;
+}
+
+.jcims__mag-container {
+	text-align: center;
+	border-bottom: 1px solid gray;
+	padding-bottom: 30px;
+	display: block;
+}
+
+.jcims__mag-container img {
+	flex-shrink: 0;
+}
+
+.jcims__mag-text {
+	padding: 0 30px;
+}
+
+.jcims__mag-text p {
+	margin: 15px 0;
+}
+
+.jcims__social-container {
+	text-align: center;
+}
+
+.jcims__connect-text {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 290px;
+}
+
+.jci-recent__container {
+	border-top: 1px solid black;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.jci-recent__container:first-of-type {
+	border-top: none;
+	padding-top: 0;
+}
+
+.jci-recent__excerpt {
+	line-height: 30px;
+	font-size: 1.375rem;
+	font-weight: 400;
+	margin-top: 5px;
+}
+
+.jci-recent__title {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
 @media all and (min-width: 768px) {
 	.podcast-player__title {
 		font-size: 2.4vw;
@@ -2259,9 +2321,44 @@ table {
 	.article-callout__text {
 		width: 50%;
 	}
+	.jcims__mag-container {
+		display: flex;
+	}
+}
+
+@media all and (min-width: 962px) {
+	.jci-recent__container {
+		display: flex;
+		flex-direction: row;
+	}
+	.jci-recent__img-container {
+		width: 315px;
+		flex-basis: 315px;
+		flex-shrink: 0;
+		margin-right: 30px;
+	}
+	.jci-recent__text-container {
+		text-align: left;
+	}
 }
 
 @media all and (min-width: 80em) {
+	.jcims__container {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+	.jcims__mag-container {
+		width: 60%;
+		border-right: 1px solid gray;
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.jcims__mag-text {
+		max-width: 475px;
+	}
+	.jcims__social-container {
+		width: 40%;
+	}
 	.recipe-block {
 		width: 50%;
 		float: right;

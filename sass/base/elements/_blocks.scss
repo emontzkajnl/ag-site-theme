@@ -435,6 +435,64 @@
         overflow: hidden;
     }
 }
+
+.jcims {
+    max-width: 100% !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .handwritten {
+        margin-top: 20px;
+    }
+
+    &__mag-container {
+        text-align: center;
+        border-bottom: 1px solid gray;
+        padding-bottom: 30px;
+        display: block;
+       
+        img {
+            flex-shrink: 0;
+        }
+    }
+    &__mag-text {
+        padding: 0 30px;
+        p {
+            margin: 15px 0;
+        }
+        
+    }
+    &__social-container {
+        text-align: center;
+    }
+    &__connect-text {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 290px;
+    }
+}
+.jci-recent {
+    &__container {
+        border-top: 1px solid black;
+        padding: 50px 0;
+        text-align: center;
+        &:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+    }
+    &__excerpt {
+        line-height: 30px;
+        font-size: 1.375rem;
+        font-weight: 400;
+        margin-top: 5px;
+
+    }
+    &__title {
+        margin-bottom: 0;
+        margin-top: 5px;
+        
+    }
+}
 @media all and (min-width: 768px) {
     .podcast-player {
         &__title {
@@ -460,10 +518,50 @@
             width: 50%;
         }
     }
-  
+    .jcims {
+        &__mag-container {
+            display: flex;
+        }
+    }
 
 }
+@media all and (min-width: 962px) {
+    .jci-recent {
+        &__container {
+            display: flex;
+            flex-direction: row;
+
+        }
+        &__img-container {
+            width: 315px;
+            flex-basis: 315px;
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+        &__text-container {
+            text-align: left;
+        }
+    }
+}
 @media all and (min-width: 80em) {
+    .jcims {
+        &__container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        &__mag-container {
+            width: 60%;
+            border-right: 1px solid gray;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        &__mag-text {
+            max-width: 475px;
+        }
+        &__social-container {
+            width: 40%;
+        }
+    }
     .recipe-block {
         width: 50%;
         float: right;
