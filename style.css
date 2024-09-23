@@ -2275,13 +2275,13 @@ table {
 	max-width: 290px;
 }
 
-.jci-recent__container {
+.jci-recent__item {
 	border-top: 1px solid black;
 	padding: 50px 0;
 	text-align: center;
 }
 
-.jci-recent__container:first-of-type {
+.jci-recent__item:first-of-type {
 	border-top: none;
 	padding-top: 0;
 }
@@ -2327,7 +2327,7 @@ table {
 }
 
 @media all and (min-width: 962px) {
-	.jci-recent__container {
+	.jci-recent__item {
 		display: flex;
 		flex-direction: row;
 	}

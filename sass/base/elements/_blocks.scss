@@ -471,7 +471,7 @@
     }
 }
 .jci-recent {
-    &__container {
+    &__item {
         border-top: 1px solid black;
         padding: 50px 0;
         text-align: center;
@@ -527,7 +527,7 @@
 }
 @media all and (min-width: 962px) {
     .jci-recent {
-        &__container {
+        &__item {
             display: flex;
             flex-direction: row;
 
