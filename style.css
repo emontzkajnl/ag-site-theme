@@ -11664,6 +11664,23 @@ figcaption {
 	border-radius: 50% !important;
 }
 
+.post-tags {
+	margin-left: 0;
+	padding-left: 0;
+	margin-bottom: 45px;
+}
+
+.post-tags li {
+	list-style: none;
+	display: inline-block;
+	color: white;
+	margin-right: 15px;
+	padding: 0 10px;
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 1rem;
+}
+
 .offwhite-bkgrnd {
 	margin-right: 0 !important;
 	margin-left: 0 !important;
