@@ -493,6 +493,27 @@
         
     }
 }
+.jci-article {
+    padding: 25px;
+    max-width: 768px;
+    &__img-container {
+        position: relative;
+        min-height: 100px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+    &__read-more {
+        text-transform: uppercase;
+    }
+}
 @media all and (min-width: 768px) {
     .podcast-player {
         &__title {
@@ -540,6 +561,29 @@
         }
         &__text-container {
             text-align: left;
+        }
+    }
+    .jci-article {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        &__container {
+            display: flex;
+            flex-direction: row;
+            min-height: 100px;
+        }
+        &__img-container {
+            display: block;
+            flex-basis: 35%;
+            flex-grow: 0;
+        }
+        &__text-container {
+            text-align: left;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 }
