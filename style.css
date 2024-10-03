@@ -2276,7 +2276,7 @@ table {
 }
 
 .jci-recent__item {
-	border-top: 1px solid black;
+	border-top: 1px solid #c6c6c6;
 	padding: 50px 0;
 	text-align: center;
 }
@@ -2361,6 +2361,7 @@ table {
 		flex-basis: 315px;
 		flex-shrink: 0;
 		margin-right: 30px;
+		align-self: center;
 	}
 	.jci-recent__text-container {
 		text-align: left;
