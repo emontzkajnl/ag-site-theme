@@ -12,7 +12,7 @@ get_header();
 
 	<main id="primary" class="site-main container">
     <?php if( function_exists('the_ad_placement') ) { 
-			the_ad_placement('leaderboard');
+			the_ad_placement('top-leaderboard');
 		} ?>
         <div class="row">
 
