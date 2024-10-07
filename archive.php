@@ -17,7 +17,7 @@ get_header();
 			<header class="page-header">
 				<?php
 					if( function_exists('the_ad_placement') ) { 
-						the_ad_placement('leaderboard');
+						the_ad_placement('top-leaderboard');
 					}
 				
 				// the_archive_description( '<div class="archive-description">', '</div>' );

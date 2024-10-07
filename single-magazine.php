@@ -20,8 +20,10 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 			// get_template_part( 'template-parts/content', get_post_type() );
-            echo '<h1 class="entry-title">'.get_the_title(  ).'</h1>';
+            echo '<h1 class="page-header col-12">'.get_the_title(  ).'</h1>';
+            echo '<div class="col-12">';
             echo the_content();
+            echo '</div>';
             $calameo = get_post_meta(get_the_ID(  ), 'calameo_id');
             echo '<div class="col-12 m-col-12 mag-container"><iframe style="margin: 0 auto;" src="//v.calameo.com/?bkcode=' . $calameo[0] . '&amp;page=1" width="100%" height="800" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div>'; 
             ?>

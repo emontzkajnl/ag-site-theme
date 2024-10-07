@@ -11,7 +11,7 @@
 <?php if ( is_singular() ) : ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry-content '); ?>>
 	<?php if( function_exists('the_ad_placement') ) { 
-			the_ad_placement('leaderboard');
+			the_ad_placement('top-leaderboard');
 		} ?>
 
 

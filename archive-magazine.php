@@ -21,7 +21,7 @@ get_header();
 				<?php
 
 			if( function_exists('the_ad_placement') ) { 
-				the_ad_placement('leaderboard');
+				the_ad_placement('top-leaderboard');
 			}
 			$q = get_queried_object(  ); ?>
 			<!-- <h1>Magazines</h1> -->
