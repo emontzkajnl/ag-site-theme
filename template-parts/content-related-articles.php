@@ -6,12 +6,18 @@ if ($categories) {
     foreach($categories as $c){
         $cat_ids[] = $c->term_id;
     }
+    $today = getdate();
     $rel_args = array(
         'post_type'         => 'post',
         'post_status'       => 'publish',
         'posts_per_page'    => 4,
         'orderby'           => 'rand',
-        'category__in'      => $cat_ids
+        'category__in'      => $cat_ids, 
+        'date_query'        => array(
+            array(
+                'after'     => $today[ 'month' ] . ' 1st, ' . ($today[ 'year' ] - 3)
+            )
+        )
     );
     $rel_articles = new WP_Query($rel_args);
     if ($rel_articles->have_posts( )): ?>
