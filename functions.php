@@ -361,3 +361,16 @@ add_filter( 'redirection_role', function( $role ) {
 			</div><?php 
 		endif;
 	}
+
+	add_filter('wpseo_breadcrumb_links', 'remove_pagination_from_breadcrumb');
+
+function remove_pagination_from_breadcrumb($links) {
+    // Remove the last item if it contains page number
+    if (is_paged() && !empty($links)) {
+        $last_link = end($links);
+        if (isset($last_link['text']) && preg_match('/\bpage\b/', $last_link['text'])) {
+            array_pop($links);
+        }
+    }
+    return $links;
+}
