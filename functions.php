@@ -165,7 +165,8 @@ function ag_sites_scripts() {
 		'currentpage'	=> '',
 		'currentRecentPage'	=> 1,
 		'currentPopularPage'	=> 1,
-		'currentRecipePage'	=> 1
+		'currentRecipePage'	=> 1,
+		'currentContestPage'	=> 1
 	) );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
