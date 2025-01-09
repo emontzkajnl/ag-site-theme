@@ -11648,6 +11648,19 @@ readers do not read off random characters that represent icons */
 	margin-right: auto;
 }
 
+.entry-content .on-page-search .search-form {
+	margin-bottom: 100px;
+	max-width: 300px;
+	padding: 0;
+}
+
+.entry-content .on-page-search .search-form input[type="search"] {
+	color: #111;
+	background: white;
+	border: 1px solid #111;
+	font-size: 1.5rem;
+}
+
 .container {
 	max-width: 1366px;
 	padding-left: 15px;
