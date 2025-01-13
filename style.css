@@ -11631,10 +11631,6 @@ readers do not read off random characters that represent icons */
 	text-align: center;
 }
 
-.updated:not(.published) {
-	display: none;
-}
-
 .page-content,
 .entry-content,
 .entry-summary {
