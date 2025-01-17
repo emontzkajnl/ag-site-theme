@@ -13,6 +13,31 @@ if ( ! function_exists( 'ag_sites_posted_on' ) ) :
 	 */
 	function ag_sites_posted_on() {
 		$time_string = 'Posted on <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() )
+		);
+
+		$posted_on = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( '%s', 'post date', 'ag-sites' ),
+			// '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			$time_string
+		);
+
+		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+endif;
+
+if ( ! function_exists( 'ag_sites_posted_on_updated' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time.
+	 */
+	function ag_sites_posted_on_updated() {
+		$time_string = 'Posted on <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = 'Posted on <time class="entry-date published" datetime="%1$s">%2$s</time><br />Updated <time class="updated" datetime="%3$s">%4$s</time>';
 		}
