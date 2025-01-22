@@ -2565,7 +2565,7 @@ input[type="submit"] {
 	background: #197b30;
 	color: #fff;
 	line-height: 1;
-	padding: 0.6em 1em 0.6em;
+	padding: 1em 5px;
 }
 
 button:hover,
