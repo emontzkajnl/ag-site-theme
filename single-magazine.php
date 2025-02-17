@@ -39,7 +39,7 @@ get_header();
             $mag_list = new WP_Query($mag_args);
 
             if ($mag_list->have_posts()): ?>
-                <h2 class="col-12 m-col-12">Previous Magazines</h2>
+                <h2 class="col-12 m-col-12">All Magazines</h2>
                 <?php while ($mag_list->have_posts()): $mag_list->the_post();
                 get_template_part( 'template-parts/content', 'magazine' );
                 endwhile; 
