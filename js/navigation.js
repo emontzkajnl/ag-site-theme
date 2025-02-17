@@ -19,7 +19,6 @@
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
-		console.log('nav clicked');
 		siteContainer.classList.toggle( 'toggled' );
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
@@ -88,7 +87,7 @@
 
 		if ( event.type === 'touchstart' ) {
 			const menuItem = this.parentNode;
-			event.preventDefault();
+			// event.preventDefault();
 			for ( const link of menuItem.parentNode.children ) {
 				if ( menuItem !== link ) {
 					link.classList.remove( 'focus' );
