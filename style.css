@@ -2320,6 +2320,10 @@ table {
 	bottom: 0;
 }
 
+.jci-article__text-container {
+	padding: 25px;
+}
+
 .jci-article__read-more {
 	text-transform: uppercase;
 }
