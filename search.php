@@ -39,8 +39,11 @@ get_header();
 			endwhile;
 
 			// the_posts_navigation();
+			// echo 'total posts '.$wp_query->post_count;
+		
+			// print_r($wp_query);
 
-		else :
+		else:
 
 			get_template_part( 'template-parts/content', 'none' );
 

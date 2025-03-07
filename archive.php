@@ -64,11 +64,7 @@ get_header();
 			<div style="text-align: center;">
 			<?php $query_vars = $wp_query->query_vars; 
 			$paged = $query_vars['paged'] ? $query_vars['paged'] : 1; ?>
-			<script>
-				// window.document.params.page = "<?php //echo $paged; ?>";
-				// console.log('start');
-				// console.log(window.document);
-			</script>
+		
 			<button data-cat="<?php echo $query_vars['cat']; ?>" data-tag="<?php echo $query_vars['tag'] ?>" data-paged="<?php echo $paged; ?>" class="background__primary font__serif" id="load-more-cats">LOAD MORE</button>
 			</div>
 			
