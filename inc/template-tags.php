@@ -38,7 +38,7 @@ if ( ! function_exists( 'ag_sites_posted_on_updated' ) ) :
 	 */
 	function ag_sites_posted_on_updated() {
 		$time_string = 'Posted on <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) < (get_the_modified_time( 'U' ) + 86400 ) ) {
+		if ( get_the_time( 'U' ) + 86400  < (get_the_modified_time( 'U' )) ) {
 			$time_string = 'Posted on <time class="entry-date published" datetime="%1$s">%2$s</time><br />Updated <time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
@@ -58,7 +58,7 @@ if ( ! function_exists( 'ag_sites_posted_on_updated' ) ) :
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
+		echo '<br />get the time '.get_the_time( 'U' ).'<br /> get the modified time '.get_the_modified_time( 'U' );
 	}
 endif;
 
