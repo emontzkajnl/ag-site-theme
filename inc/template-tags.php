@@ -58,7 +58,6 @@ if ( ! function_exists( 'ag_sites_posted_on_updated' ) ) :
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo '<br />get the time '.get_the_time( 'U' ).'<br /> get the modified time '.get_the_modified_time( 'U' );
 	}
 endif;
 
