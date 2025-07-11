@@ -11643,11 +11643,6 @@ readers do not read off random characters that represent icons */
 	text-align: center;
 }
 
-div[class$="-leaderboard"], div[class$="-in-content"], div[class$="-right-rail"] {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
 .page-content,
 .entry-content,
 .entry-summary {

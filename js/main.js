@@ -75,7 +75,8 @@ let currentPage = 1;
       success: function(res){
         if (res) {
           $('.alm-container').append(res);
-          console.log('page is ', currentPage, ' max is ', window.maxpages);
+          console.log('running parent theme!');
+          // console.log('page is ', currentPage, ' max is ', window.maxpages);
           // window.params.currentpage = window.params.currentpage + 1;
           // console.log('page  is ', window.params.currentpage);
         } else {
