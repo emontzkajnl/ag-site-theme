@@ -1374,7 +1374,7 @@ body {
 }
 
 .site-main {
-	padding-top: 125px;
+	padding-top: 80px;
 }
 
 .nav-container {
@@ -2453,8 +2453,8 @@ table {
 
 div[class$="-leaderboard"], div[class$="-in-content"], div[class$="-right-rail"] {
 	text-align: center;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 35px;
+	margin-bottom: 35px;
 }
 
 div[class$="-right-rail"] {
