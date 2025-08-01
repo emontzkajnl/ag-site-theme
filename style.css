@@ -1512,6 +1512,7 @@ body {
 	cursor: pointer;
 	border-color: transparent;
 	font-size: 1.3rem;
+	margin-right: 25px;
 	color: #111;
 }
 
@@ -2334,6 +2335,14 @@ table {
 	text-transform: uppercase;
 }
 
+.jci-article__title {
+	font-size: 1.5rem;
+}
+
+.jci-article__read-more {
+	font-size: 1.25rem;
+}
+
 @media all and (min-width: 768px) {
 	.podcast-player__title {
 		font-size: 2.4vw;
@@ -2399,6 +2408,12 @@ table {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+	.jci-article__title {
+		font-size: 1.75rem;
+	}
+	.jci-article__read-more {
+		font-size: 1.5rem;
 	}
 }
 
