@@ -54,10 +54,10 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				if ($first_mag):
+				// if ($first_mag):
 				get_template_part( 'template-parts/content', 'magazine' );
-				endif;
-				$first_mag = true;
+				// endif;
+				// $first_mag = true;
 				
 			endwhile;
 			echo '</div>';
