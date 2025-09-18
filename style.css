@@ -2032,6 +2032,11 @@ table {
 	cursor: default;
 }
 
+.ilfb-article-list button.ilfb-article-list__load-more {
+	font-size: 1rem;
+	cursor: pointer;
+}
+
 .ilfb-afps {
 	margin-bottom: 50px;
 	text-align: center;
